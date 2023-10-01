@@ -601,6 +601,7 @@ const mapStateToProps = (globalState) => {
 	};
 }
 
+
 export default connect(mapStateToProps, { loaderStateTrue, loaderStateFalse, setToken, setUserCredentials, logOutApp, roleWisePermission, setVersionList })(withRouter(LoginPage));
 
 
