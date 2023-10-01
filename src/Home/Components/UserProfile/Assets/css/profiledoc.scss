@@ -1,0 +1,4361 @@
+@import "var";
+@import "profilemixin";
+
+body {
+    background-color: $white_background;
+    font-family: $PoppinsR;
+    overflow-y: hidden;
+}
+
+.profilemaincontainer {
+    display: $displayNone;
+}
+
+.tabcontainerspace {
+    .tab-content {
+        padding: 0vw 1.5vw 0vw 1.5vw;
+    }
+
+    .profiletabsview {
+        .tab-content {
+            padding: 0vw 0vw 0vw 0vw;
+            width: $fullwidth;
+            display: $inblock;
+        }
+    }
+}
+
+.profilemaincontainer.profilecontentdispaly {
+    display: $displayBlock;
+    height: 80vh;
+}
+
+.profilemaincontainer {
+    margin: 1vw 0vw 0vw 0vw;
+    padding: 1.4vw 1.35vw 0px 1.35vw;
+    border: 1px solid $lightsilver;
+    border-radius: 10px;
+    width: $fullwidth;
+    float: $fl;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(56,65,74,.15);
+
+    .tabsmainbox.nav-tabs {
+        width: $fullwidth;
+        border-bottom: 2px solid $lightsilver;
+        z-index: 0;
+    }
+
+    .profiletopbox {
+        padding: 0px 0.6vw 0.2vw 0px;
+    }
+
+    .profileimgsec {
+        position: $relPosition;
+        //padding: 9px 0px 0px 40px;
+        padding: 0.5vw 0px 0px 2.6vw;
+        display: $inblock;
+        width: $fullwidth;
+
+        .userprofileimg {
+            height: 7.82vw;
+            width: 7.82vw;
+            border-radius: 0%;
+            float: $fl;
+            border: 0px solid $whitebg;
+            .custom-file-upload {
+                height: 7.82vw !important;
+                width: 7.82vw !important;
+                border-radius: 4px;
+                top: -2px;
+                left: -1px;
+
+                .hoverlayerbackground {
+                    opacity: 0;
+                    -moz-transition: all 0.5s ease-in-out;
+                    -o-transition: all 0.5s ease-in-out;
+                    -webkit-transition: all 0.5s ease-in-out;
+                    -ms-transition: all 0.5s ease-in-out;
+                    transition: all 0.5s ease-in-out;
+                    position: absolute;
+                    //top: 0;
+                    bottom: 5px;
+                    border-bottom-left-radius: 6px;
+                    border-bottom-right-radius: 6px;
+                    left: 5px;
+                    right: 5px;
+                    background-color: rgba(0, 0, 0, 0.75);
+                    cursor: pointer;
+                    height: 30px;
+                    .hoverContent {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 100%;
+                    }
+
+                    .cameraicon {
+                        height: 22px;
+                        width: 24px;
+                        border-radius: 0;
+                    }
+
+                    p {
+                        font-size: 0.8vw;
+                        color: $whiteColor;
+                        margin: 2px 0 0 0;
+                    }
+                }
+
+                &:hover {
+                    .hoverlayerbackground {
+                        opacity: 1;
+                    }
+                }
+            }
+
+            .savecancelinner {
+                position: $absPosition;
+                bottom: -1.5vw;
+                white-space: nowrap;
+            }
+
+            .profileimgsave {
+                background: $whiteColor;
+                border: 2px solid $lightskybg;
+                color: $lightskybg;
+                font-size: 0.8vw;
+                cursor: $cursorP;
+                padding: 0.14vw 0.4vw;
+                margin: 0;
+                line-height: 0.95vw;
+                border-radius: 0.2vw;
+                width: 3.6vw;
+            }
+
+            .profileimgcancel {
+                background: $whiteColor;
+                border: 2px solid $lightred;
+                color: $lightred;
+                font-size: 0.8vw;
+                cursor: $cursorP;
+                padding: 0.14vw 0.4vw;
+                margin: 0 0 0 0.3vw;
+                line-height: 0.95vw;
+                border-radius: 0.2vw;
+                width: 3.9vw;
+            }
+
+            .error_div {
+                position: $absPosition;
+                left: 0;
+                right: 0;
+                bottom: -1.2vw;
+                color: $redColor;
+                font-size: 0.9vw;
+                text-align: $alignCT;
+            }
+
+            img {
+                cursor: pointer;
+                border-radius: 6px;
+                border: 2px solid $whitebg;
+            }
+        }
+    }
+    .profileimgsec_top_space{
+        padding: 0.5vw 0px 15px 2.6vw;
+        .userprofileimg .savecancelinner {
+            bottom: -1.5vw;
+        }
+    }
+
+    .backtoworker {
+        position: $absPosition;
+        background-color: transparent;
+        border: $displayNone;
+        color: $bluecolor;
+        font-size: 35px;
+        left: -17px;
+        top: -10px;
+        padding: 0;
+        line-height: 0;
+    }
+
+    .userprofdetails {
+        float: $fl;
+        width: 75%;
+        //padding: 1.5vw 0px 0px 2.4vw;
+        padding: 0vw 0px 0px 1vw;
+
+        .pronamelabel {
+            font-size: 1.955vw;
+            font-family: $PoppinsM;
+            color: $darkblack;
+            margin: 0 0 0.3vw 0;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: $fullwidth;
+        }
+
+        .proaddlabel {
+            font-size: 0.85vw;
+            color: $silverlight;
+            margin: 0 0 0.2vw 0.7vw;
+        }
+
+        .pronumlabel {
+            font-size: 0.85vw;
+            color: $silverlight;
+            margin: 0.2vw 0 0.2vw 0vw;
+        }
+
+        .phonenumber {
+            position: relative;
+        }
+
+        .emailidlabel {
+            font-family: $PoppinsSB;
+        }
+
+        .prostatusbox {
+            float: $fl;
+            display: flex;
+            margin: 0.6vw 0 0.3vw 0.7vw;
+
+            .prostatuslabel {
+                width: 13px;
+                height: 13px;
+                background-color: $lightgreen;
+                float: $fl;
+                position: $relPosition;
+                top: 3px;
+                border-radius: 50%;
+                margin: 0px 7px 0px 0px;
+            }
+
+            .prountillabel {
+                font-size: $font13;
+                color: $silverlight;
+                margin: 0;
+            }
+
+            .proundatelabel {
+                font-size: $font13;
+                color: $silverlight;
+                opacity: 0.5;
+                margin: 0px 0px 0px 5px;
+            }
+        }
+
+        /*.userStatus{
+            position: $absPosition;
+            width: 0.8vw;
+            height: 0.8vw;
+            bottom: 0.25vw;
+            display: $displayBlock;
+            left: 0px;
+            border-radius: 50%;
+          }
+          .active{
+            background-color: $lightgreen;
+          }
+          .inactive{
+            background-color: $lightred;
+        }*/
+        .userstatusDetails {
+            position: relative;
+            font-size: 0.85vw;
+            color: $silverlight;
+            margin: 0.2vw 0 0.2vw 0.7vw;
+
+            .userStatus {
+                position: $absPosition;
+                width: 0.7vw;
+                height: 0.7vw;
+                bottom: 0.25vw;
+                display: $displayBlock;
+                left: 0px;
+                border-radius: 50%;
+            }
+
+            .active {
+                background-color: $lightgreen;
+            }
+
+            .inactive {
+                background-color: $lightred;
+            }
+
+            .onsitelabel {
+                padding-left: 16px;
+            }
+
+            .untillabel {
+                padding: 0px 5px;
+            }
+
+            .unavailablelabel {
+                padding-left: 16px;
+            }
+        }
+    }
+
+    .archiveempsec {
+        text-align: $alignRT;
+
+        .archivedownbtn {
+            background-color: transparent;
+            border: 1px solid $lightred;
+            color: $lightred;
+            border-radius: 0.4vw;
+            font-size: 0.91vw;
+            line-height: 1.63vw;
+            padding: 0.13vw 0.55vw;
+            margin: 0 0.4vw 0 0;
+            font-family: $PoppinsM !important;
+            position: $relPosition;
+            top: -0.1vw;
+
+            span {
+                margin: 0px 10px 0 4px;
+                font-size: $font18;
+            }
+
+            img {
+                height: 1.37vw;
+            }
+        }
+
+        .archivedeletebtn {
+            background-color: transparent;
+            border: 1px solid $silverlight;
+            border-radius: 0.4vw;
+            font-size: 1.18vw;
+            padding: 0.13vw 0.6vw;
+            color: $silverlight;
+        }
+
+        .deleteuserbtn {
+            border: 1px solid $lightred;
+            color: $lightred;
+        }
+    }
+
+    .profiletabsview {
+        padding: 0px 34px;
+
+        .tabsmainbox.nav-tabs .nav-link {
+            padding: 0vw 1.4rem .5vw 1.4rem;
+            margin: 0vw 0vw;
+            font-size: 0.9vw;
+            font-family: $PoppinsM;
+            position: $relPosition;
+            top: 1px;
+            color: $greybgdark;
+        }
+
+        .tabsmainbox.nav-tabs .nav-link.active {
+            color: $bluecolor;
+            border-bottom-width: 0.16vw;
+        }
+
+        .tabsmainbox.nav-tabs .nav-link:hover {
+            border-bottom-width: 0.16vw;
+        }
+
+        .profilecontainer {
+            //padding: 3.1vw 0px 0px 118px;
+            padding: 1.5vw 0px 0px 118px;
+            width: $fullwidth;
+            float: $fl;
+
+            .inputviewinner {
+                width: 69%;
+                float: $fl;
+            }
+
+            .rightsideview {
+                width: 30%;
+                float: $fl;
+                text-align: $alignCT;
+                position: $relPosition;
+
+                .submitbtnprofile {
+                    position: fixed;
+                    bottom: 6vw;
+                }
+
+                .cancelbtn {
+                    background: $whitecolor;
+                    border: 1px solid $bluecolor;
+                    color: $bluecolor;
+                    font-size: 0.9vw;
+                    border-radius: 0.2vw;
+                    padding: 0.33vw 0.9vw;
+                    margin-left: 6px;
+                    font-family: $PoppinsM;
+                    position: fixed;
+                    bottom: 6vw;
+                    margin: 0vw 0vw 0vw 6vw;
+                }
+            }
+
+            .inputrowbox {
+                padding: 0px 0px 0px 54px;
+                margin: 0px 0px 2px 0px;
+                float: $fl;
+                width: $fullwidth;
+                position: $relPosition;
+                background: $whitecolor;
+
+                &:hover .editicon {
+                    display: $displayBlock;
+                }
+
+                .futurenote {
+                    width: 250px;
+                    position: absolute;
+                    right: -250px;
+                    top: 50%;
+                    transform: translate(0%, -50%);
+                    -ms-transform: translate(0%, -50%);
+                    -webkit-transform: translate(0%, -50%);
+                    color: $graydark;
+                    font-size: 11px;
+                    font-family: $PoppinsR;
+                    line-height: 16px;
+                    padding: 0px 5px;
+                }
+                .error_div {
+                    padding: 0 !important;
+                    font-size: $font12;
+                    position: $absPosition;
+                    bottom: -11px;
+                    color: $redColor;
+                }
+            }
+
+            // .inputrowboxevent{
+            //     background: $slidewhitebg;
+            //     border: 1px solid $slidewhitebg;
+            // }
+            .inputrowbox:nth-child(odd) {
+                background: $slidewhitebg;
+                border: 1px solid $slidewhitebg;
+            }
+
+            .inputrowboxevent.showerror {
+                border: 1px solid $redColor;
+            }
+
+            // .inputrowboxodd{
+            //     background: $whitecolor;
+            // }
+            .inputrowboxodd.showerror {
+                border: 1px solid $redColor;
+            }
+
+            .inputfieldview.profiledropdown.entreprisesdropdown {
+                width: 51.5% !important;
+                float: right;
+            }
+
+            .managerfieldrow {
+                .inputfieldview {
+                    font-size: $font13;
+                    color: $slidegreybg;
+                    background-color: $slidewhitebg;
+                    height: 41px;
+                    padding: 10px 12px 0px 12px;
+                    width: 51.5% !important;
+                    float: right;
+                }
+            }
+
+            .editicon {
+                position: $absPosition;
+                right: 30px;
+                top: 3px;
+                font-size: $font20;
+                color: rgba(0, 0, 0, 0.54);
+                display: $displayNone;
+                //z-index: 3;
+                -webkit-appearance: button;
+                -moz-appearance: button;
+                appearance: button;
+
+                &:hover {
+                    color: $lightbg;
+                    cursor: $cursorP;
+                }
+
+            }
+
+            .inputtextarea {
+
+                //height: 105px;
+                .input_field_inner {
+                    height: $fullwidth !important;
+                }
+
+                .input__fields_property {
+                    height: 102px !important;
+                    resize: none;
+                }
+            }
+
+            .inputlabelview {
+                float: $fl;
+                width: 63%;
+                color: $graydark;
+                opacity: 1;
+                line-height: 35px;
+                padding: 3px 0px;
+                font-size: $font13;
+                font-family: $PoppinsSB;
+            }
+
+            .inputfieldview {
+                float: $fl;
+                width: 37%;
+                color: $slidegreybg;
+                opacity: 1;
+
+                .input__fields_property {
+                    width: $fullwidth;
+                    font-size: $font13;
+                    color: $slidegreybg;
+                    border-width: 0;
+                    padding: 0 4px;
+                    height: 36px;
+                    line-height: 30px;
+                    background: transparent;
+                    border: 1px solid transparent;
+                    position: $relPosition;
+                    //z-index: 2;
+                    resize: none;
+
+                    &:focus-visible {
+                        outline: none;
+                        border: 1px solid $lightsilver;
+                        background: $whitecolor;
+                        box-shadow: none;
+                    }
+                }
+            }
+
+            .btnrow {
+                padding: 4px 0px;
+            }
+
+            .permbtn {
+                background: linear-gradient(180deg, $lightbg 0%, $bluecolor $fullwidth);
+                border-radius: 6px;
+                color: $whitecolor;
+                font-size: $font13;
+                font-family: $PoppinsM;
+                border: none;
+                padding: 3px 9px;
+            }
+        }
+
+        .datepickerrow {
+
+            .react-datepicker-wrapper,
+            .DatePicker {
+                width: $fullwidth;
+            }
+
+            input {
+                width: $fullwidth;
+                border: none;
+                height: 36px;
+                background: transparent;
+                font-size: $font13;
+                color: $slidegreybg;
+                position: $relPosition;
+                //z-index: 2;
+                padding: 0px 12px;
+                border: 1px solid transparent;
+                text-align: left;
+
+                &:focus-visible {
+                    outline: none;
+                    border: 1px solid $lightsilver;
+                    background: $whitecolor;
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+
+    .profilepersonalcon {
+        .inputlabelview {
+            width: 47% !important;
+        }
+
+        .inputfieldview {
+            width: 53% !important;
+        }
+
+        .secondviewbox {
+            padding: 2px 11px 0px 11px;
+
+            .secondviewlabel {
+                margin: 0;
+                color: $graydark;
+                font-size: $font13;
+                font-family: $PoppinsR;
+                padding: 0px 0px 8px 0px;
+                width: $fullwidth;
+                display: $inblock;
+
+                &:last-child {
+                    padding: 0px 0px 0px 0px;
+                }
+
+                .multifirstview {
+                    width: 40%;
+                    float: $fl;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+
+                .multisecondview {
+                    width: 55%;
+                    float: $fl;
+                    padding-left: 6px;
+
+                    span {
+                        display: inline-block;
+                    }
+                }
+
+                .deleteHistoryInner {
+                    width: 5%;
+                    float: $fl;
+                    text-align: right;
+                }
+
+                .datedivider {
+                    padding: 0px 3px;
+                }
+            }
+        }
+
+        .input__fields_property {
+            padding: 0 12px !important;
+        }
+
+        .editicon {
+            right: 20px !important;
+        }
+
+        .generalInfoLabel {
+            padding: 0 0 0 0.7vw;
+
+            span {
+                color: $graydark;
+                font-size: 13px;
+                font-family: $PoppinsR;
+            }
+        }
+    }
+
+    .documentscon {
+        //padding: 4.8vw 0px 0px 0px !important;
+        padding: 2vw 0px 0px 0px !important;
+        position: $relPosition;
+        left: -24px;
+
+        .docnamelabel {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            width: 155px;
+            display: $inblock;
+            position: relative;
+            top: 3px;
+        }
+    }
+
+    .documentsconinner {
+        width: $fullwidth;
+        float: $fl;
+        min-height: 18vw;
+        max-height: 18vw;
+        // min-height: 16vw;
+        // max-height: 16vw;
+    }
+
+    .verticaltabsinner {
+
+        .nav-pills .nav-link.active,
+        .nav-pills .show>.nav-link {
+            color: $lightskybg;
+            background-color: transparent;
+            border-radius: 0;
+            position: $relPosition;
+            font-family: $PoppinsSB;
+
+            &::before {
+                content: '';
+                position: $absPosition;
+                right: -1px;
+                top: -4px;
+                height: 37px;
+                width: 2px;
+                background-color: $lightskybg;
+            }
+        }
+
+        .nav-link {
+            color: $greybgdark;
+            font-size: 0.781vw;
+            padding: 0.57vw 0.6vw 0.57vw 0rem;
+            text-align: $alignRT;
+            font-family: $PoppinsM;
+        }
+
+        &:hover {
+            color: $bluedark;
+        }
+
+        .nav-pills {
+            border-right: 1px solid $slidewhitebg2;
+            padding: 2vw 0px 0vw 0px;
+            margin: 2vw 0px 0px 0px;
+        }
+
+        .tabsnameview {
+            padding: 0px;
+            max-width: 10vw;
+        }
+
+        .tableviewdoc {
+            margin: 0px;
+
+            thead {
+                position: sticky;
+                z-index: 99;
+                top: 0;
+
+                th {
+                    border-top: 0px solid $lightgrayuncommon;
+                    border-bottom: 0px solid $lightgrayuncommon;
+                    background-color: $bluebg;
+                    padding: 0.226vw 0.5vw;
+                    font-size: 0.85vw;
+                    color: $whitecolor;
+                    font-family: $PoppinsM;
+                    font-weight: inherit;
+                    text-align: $alignCT;
+                    letter-spacing: -0.653846px;
+                }
+
+                .radisbox {
+                    border-top-left-radius: 11px;
+                    border-bottom-left-radius: 11px;
+                    width: 180px;
+                }
+
+                .radisboxR {
+                    border-top-right-radius: 11px;
+                    border-bottom-right-radius: 11px;
+                }
+            }
+
+            td {
+                border-top: 0px solid $lightgrayuncommon;
+                font-family: $PoppinsR;
+                color: $slidegreybg;
+                font-size: 0.85vw;
+                padding: 0.29vw 10px;
+                text-align: center;
+                line-height: 1.3vw;
+                vertical-align: middle;
+
+                &:nth-child(1) {
+                    color: $graydark;
+                    font-family: $PoppinsM;
+                    text-align: $alignLT;
+                }
+
+                &:last-child {
+                    text-align: $alignLT;
+                }
+            }
+
+            tbody tr:nth-of-type(2n+1) {
+                background-color: $slidewhitebg;
+            }
+
+            tbody {
+                position: $relPosition;
+                top: 2.1vw;
+            }
+        }
+
+        .tab-content {
+            padding: 0vw 0vw 0vw 0vw !important;
+        }
+
+        .doctabsview {
+            padding: 0px 2px 0px 44px;
+        }
+
+        .downloadiconbtn {
+            background: transparent;
+            border: none;
+            color: $silvergray;
+            font-size: $font16;
+            font-weight: 300;
+            padding: 0 0px;
+            margin: 0 1.3vw;
+            position: $relPosition;
+            top: -1px;
+
+            img {
+                height: 1.35vw;
+                width: 1.43vw;
+            }
+        }
+
+        .othersdocbtn {
+            img {
+                width: 1.2vw;
+            }
+        }
+
+        .closeiconbtn {
+            background: transparent;
+            border: none;
+            color: $silvergray;
+            font-size: $font16;
+            font-weight: 300;
+            padding: 0 0px;
+            margin: 0 0px 0 1.5vw;
+            position: $relPosition;
+            top: -1px;
+
+            // right: -12px;
+            img {
+                height: 0.91vw;
+            }
+        }
+
+        button {
+            width: 33.33%;
+            margin: 0 !important;
+        }
+
+        .tableviewdocinner {
+            width: $fullwidth;
+            float: $fl;
+            // min-height: 255px;
+            min-height: 18vw;
+            max-height: 18vw;
+            // min-height: 16vw;
+            // max-height: 16vw;
+            overflow-y: auto;
+            overflow-x: hidden;
+            direction: ltr;
+            scrollbar-color: $whitecolor $whitecolor;
+            -moz-scrollbar-color: $whitecolor $whitecolor;
+            -webkit-scrollbar-color: $whitecolor $whitecolor;
+            scrollbar-width: thin;
+        }
+
+        .adddocbtninner {
+            text-align: $alignRT;
+            padding: 0.5vw 0px 0px 0px;
+            width: $fullwidth;
+            display: $inblock;
+
+            span {
+                color: $blkbglight;
+                font-size: 0.85vw;
+                font-family: $PoppinsM;
+                padding: 0px 0.6vw 0px 0px;
+            }
+        }
+
+        .adddocbtn {
+            padding: 0.1vw 0vw 0.1vw 0;
+            margin: 0;
+            border: none;
+            background: linear-gradient(180deg, $lightblue 0%, $bluecolor $fullwidth);
+            width: 1.89vw;
+            height: 1.89vw;
+            border-radius: 50%;
+            text-align: $alignCT;
+            line-height: 0px;
+
+            img {
+                height: 1.2vw;
+            }
+        }
+    }
+
+    .profiletabsview .careerchartview {
+        //padding: 2.5vw 0px 0px 0px;
+        padding: 0vw 0px 0px 0px;
+    }
+
+    .profilemaincontainerinner {
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+    }
+
+    .profilemaincontainerinner.profilemaincontainerinnerdisabled {
+        .inputviewinner {
+            pointer-events: none;
+        }
+
+        .tableviewdoc tbody {
+            pointer-events: none;
+        }
+
+        .progressBoxes,
+        .bottompanelBoxes {
+            pointer-events: none;
+        }
+    }
+}
+
+.userRead {
+    .inputviewinner {
+        pointer-events: none;
+    }
+
+    .documentsconinner {
+        .tabsnameview {
+            pointer-events: none;
+        }
+
+        .tableviewdocinner {
+            tbody {
+                pointer-events: none;
+            }
+        }
+    }
+
+    .horizontal-timeline-wrapper {
+        pointer-events: none;
+    }
+
+    .progressBoxes {
+        .progressBarGrid {
+            pointer-events: none;
+        }
+    }
+}
+
+.deleteconfirmation {
+    .modal-dialog {
+        width: 310px;
+    }
+
+    .modal-header {
+        padding: 1.5rem 1rem 0.5rem 1rem;
+    }
+
+    .modal-title {
+        color: $deepbluebg;
+        font-size: $font17;
+        margin: 0px auto;
+    }
+
+    .modal-body {
+        padding: 0.4rem 2.2rem 0.1rem 2.2rem;
+
+        p {
+            color: $silvergray;
+            font-size: $font13;
+            margin: 0;
+            text-align: justify;
+            text-align-last: center;
+        }
+    }
+
+    .modal-footer {
+        border-top: 0px solid $lightgrayuncommon;
+        justify-content: center;
+
+        .delconfirmbtn {
+            background: $lightskybg;
+            border-radius: 4px;
+            border: none;
+            font-size: $font13;
+            padding: 1px 10px;
+            font-family: $PoppinsM;
+            margin: .25rem 0rem;
+
+            &:focus {
+                outline: none;
+                box-shadow: none;
+            }
+        }
+
+        .delcancelbtn {
+            background: transparent;
+            color: $lightbg;
+            border: none;
+            font-size: $font13;
+            font-family: $PoppinsM;
+            margin: .25rem .1rem;
+
+            &:focus {
+                outline: none;
+                box-shadow: none;
+            }
+
+            &:focus-visible {
+                outline: none;
+                box-shadow: none;
+            }
+
+            &:active {
+                background-color: transparent !important;
+                border: none !important;
+                color: $lightbg !important;
+                outline: none;
+                box-shadow: none !important;
+            }
+        }
+    }
+}
+
+.deletedocfooter {
+    .modfooterbtn {
+        display: $displayNone
+    }
+}
+
+.profilepersonalcon {
+    @include customscrollbar;
+}
+
+.archivingdatemodalview {
+    display: flex !important;
+    justify-content: right;
+
+    .modal-dialog {
+        width: 230px;
+        margin: 0px !important;
+        align-items: flex-start;
+        margin-top: 100px !important;
+        margin-right: 130px !important;
+    }
+
+    .modal-header {
+        padding: 1.2rem 0.6rem 0.0rem 0.6rem;
+    }
+
+    .modal-title {
+        margin: 0;
+    }
+
+    .modal-body {
+        padding: 0.4rem 0.6rem 0.1rem 0.6rem;
+    }
+
+    .modal-title {
+        font-size: $font15;
+    }
+
+    .modal-footer .delconfirmbtn {
+        padding: 3px 10px;
+    }
+
+    .datepickerinnerbox {
+        label {
+            color: $silvergray;
+            font-size: $font14;
+        }
+    }
+
+    .datepicker_icon {
+        background-position: 96% 9px !important;
+    }
+}
+
+.documentaddmodal {
+    .modal-dialog {
+        width: 395px;
+    }
+
+    .modal-title {
+        color: $deepbluebg;
+        font-size: $font27;
+        font-family: $PoppinsR;
+    }
+
+    .modal-header {
+        padding: 2rem 1.8rem 0rem 1.8rem;
+
+        .close {
+            color: $graydarkcommon;
+            opacity: 1;
+            font-size: 30px;
+            padding: 0px 15px 0px 0px;
+        }
+    }
+
+    .modal-body {
+        padding: 0.4rem 0.9rem 1.3rem 0.9rem;
+    }
+
+    .filedragdropinner {
+        text-align: $alignCT;
+        border: 2px solid $lightsilver;
+        border-radius: 7px;
+        padding: 0px 0px;
+        margin: 10px 0px 10px 0px;
+
+        img {
+            height: 30px;
+        }
+
+        .droplabel {
+            color: $whitebgun;
+            font-size: $font12;
+            margin: 5px 0px 0px 0px;
+        }
+    }
+
+    .dragUploadComplete {
+        .droplabel {
+            color: $silvergray;
+            width: $fullwidth;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            padding: 0px 10px;
+        }
+    }
+
+    .sharedlabel {
+        padding: 0px 15px;
+        color: $silvergray;
+        font-size: $font14;
+        margin: 0px 0px 8px 0px;
+    }
+
+    .file-drop {
+        padding: 15px 0px;
+    }
+
+    .visibleappcheck {
+        .custom_checkbox_tick {
+            display: $displayBlock;
+            position: $relPosition;
+            cursor: $cursorP;
+            font-size: $font13;
+            padding-left: 20px;
+            margin-bottom: 0px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+
+            &:hover input~.checkmarkCheckbox {
+                background-color: $whitecolor;
+                border: 2px solid $lightsilver;
+            }
+
+            input {
+                position: $absPosition;
+                opacity: 0;
+                cursor: $cursorP;
+                height: 0;
+                width: 0;
+
+                &:checked~.checkmarkCheckbox {
+                    background-color: $lightgreen;
+                    border: 2px solid $lightgreen;
+                    border-radius: 4px;
+                }
+
+                &:checked~.checkmarkCheckbox:after {
+                    display: $displayBlock;
+                }
+            }
+
+            .checkmarkCheckbox {
+                position: $absPosition;
+                top: 0;
+                left: 0;
+                height: 20px;
+                width: 20px;
+                background-color: $whitecolor;
+                border: 2px solid $lightsilver;
+                border-radius: 4px;
+
+                &:after {
+                    content: "";
+                    position: $absPosition;
+                    display: $displayNone;
+                    left: 5px;
+                    top: 0px;
+                    width: 7px;
+                    height: 14px;
+                    border: solid $whitecolor;
+                    border-width: 0 3px 3px 0;
+                    -webkit-transform: rotate(45deg);
+                    -ms-transform: rotate(45deg);
+                    transform: rotate(45deg);
+                }
+            }
+        }
+
+        display: $inblock;
+        padding: 0px 0px 8px 0px;
+
+        .custom_checkbox_tick {
+            color: $graydarkcommon;
+            padding-left: 0px;
+            padding-right: 40px;
+
+            .checkmarkCheckbox {
+                left: inherit;
+                right: 0;
+                height: 24px;
+                width: 23px;
+
+                &::after {
+                    border: solid $lightbg;
+                    border-width: 0 3px 3px 0;
+                    left: 8px;
+                    top: 2px;
+                }
+            }
+
+            input:checked~.checkmarkCheckbox {
+                background-color: $whitecolor;
+                border: 2px solid $whitecolor;
+                box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.07);
+            }
+        }
+    }
+
+    .modfooterbtn {
+        text-align: $alignCT;
+
+        .savebtn {
+            padding: 3px 23px;
+        }
+    }
+
+    .uploadfiledoc {
+        float: $fl;
+        width: $fullwidth;
+        padding: 4px 0px 25px 0px;
+
+        .orlabel {
+            color: $graydarkcommon;
+            font-size: $font13;
+            float: $fl;
+            padding: 0;
+            margin: 7px 12px 0 0;
+        }
+    }
+
+    .file_name_property {
+        float: $fl;
+        width: 90%;
+
+        .custom-file-upload {
+            border: 2px solid $lightbg;
+            background: $lightbg;
+            box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+            float: $fl;
+            padding: 7px 8px;
+            cursor: $cursorP;
+            border-radius: 4px;
+            width: auto;
+            max-width: $fullwidth;
+            margin-right: 15px;
+            margin-bottom: 0px;
+
+            span {
+                font-size: $font11;
+                color: $whitecolor;
+                font-family: $PoppinsR;
+                width: $fullwidth;
+                float: $fl;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                text-align: $alignCT;
+            }
+
+            input[type="file"] {
+                display: $displayNone;
+            }
+        }
+    }
+
+    .uploadfileError {
+        bottom: -4px;
+    }
+}
+
+.careerchartview {
+    overflow-x: auto;
+    overflow-y: auto;
+    scrollbar-color: $silvergray $whitecolor;
+    -moz-scrollbar-color: $silvergray $whitecolor;
+    -webkit-scrollbar-color: $silvergray $whitecolor;
+    scrollbar-width: thin;
+
+    &::-webkit-scrollbar {
+        height: 7px;
+        width: 7px;
+        background: $graydark;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $graydark
+    }
+
+    .horizontal-timeline {
+        position: $relPosition;
+        font-family: $PoppinsR;
+        //overflow:hidden; 
+        text-align: $alignCT;
+    }
+
+    .horizontal-timeline:before {
+        content: '';
+        position: $absPosition;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+        background-color: $whitecolor;
+    }
+
+    .horizontal-timeline>.horizontal-timeline-wrapper {
+        position: $relPosition;
+        top: 13px;
+        height: 21.5vw;
+        margin: 0px 20px;
+        white-space: nowrap;
+        //overflow-x: auto;
+        //overflow-y: hidden;
+    }
+
+    .horizontal-timeline>.horizontal-timeline-wrapper>.horizontal-timeline-item {
+        position: $relPosition;
+        display: $inblock;
+        //width:188px;
+        width: 12.5vw;
+        margin: 0px 15px;
+    }
+
+    .horizontal-timeline>.horizontal-timeline-wrapper>.horizontal-timeline-item>.horizontal-timeline-item-text {
+        display: $displayBlock;
+        // min-height: 115px;
+        // max-width: 185px;
+        // min-width: 185px;
+        min-height: 7.5vw;
+        max-width: 12vw;
+        min-width: 12vw;
+        border-radius: 0.7vw;
+        text-align: $alignLT;
+        padding: 20px 10px 10px 10px;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        background: $tblevenbg;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        -moz-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        -webkit-transition: all 0.5s ease-in-out;
+        -ms-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+
+        &::before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            // background: rgba(14, 152, 234, 0.8);
+            background: rgba(0, 0, 0, 0.4);
+            opacity: 0;
+            -moz-transition: all 0.5s ease-in-out;
+            -o-transition: all 0.5s ease-in-out;
+            -webkit-transition: all 0.5s ease-in-out;
+            -ms-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;
+        }
+
+        h4 {
+            color: $bluedark;
+            opacity: 0.85;
+            text-align: $alignCT;
+            font-size: 0.88vw;
+            font-family: $PoppinsSB;
+            margin: 0px 0px 10px 0px;
+        }
+
+        p {
+            color: $bluedarkun;
+            opacity: 0.8;
+            text-align: $alignCT;
+            font-size: 0.7vw;
+            font-family: $PoppinsR;
+            margin: 0px 0px 0px 0px;
+            white-space: normal;
+            padding: 0px 9px;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .careerActionbox {
+            //display: none;
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            text-align: center;
+            transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transition: all 0.5s ease-in-out;
+            -o-transition: all 0.5s ease-in-out;
+            -webkit-transition: all 0.5s ease-in-out;
+            -ms-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;
+
+            .editCareerBtn {
+                background: $lightbg;
+                border: none;
+                font-size: 20px;
+                color: $whitecolor;
+                padding: 3px 4px;
+                line-height: 1vw;
+                margin: 0px 10px 0px 0px;
+                border-radius: 4px;
+                width: 30px;
+                text-align: center;
+            }
+
+            .deleteCareerBtn {
+                background: $lightred;
+                border: none;
+                color: $whitecolor;
+                font-size: 20px;
+                padding: 3px 6px;
+                line-height: 1vw;
+                border-radius: 4px;
+                width: 30px;
+                text-align: center;
+                position: relative;
+                top: -1px;
+            }
+        }
+
+        &:hover {
+            .careerActionbox {
+                opacity: 1;
+            }
+
+            &::before {
+                opacity: 1;
+            }
+
+            h4,
+            p {
+                text-shadow: 0 0 3px black;
+                color: transparent;
+            }
+        }
+    }
+
+    .horizontal-timeline>.horizontal-timeline-wrapper>.horizontal-timeline-item>.horizontal-timeline-item-period {
+        margin: 20px auto;
+        padding: 5px;
+        width: 75px;
+        text-align: $alignCT;
+        color: $whitecolor;
+        font-weight: bold;
+        z-index: 2;
+    }
+
+    .horizontal-timeline>.horizontal-timeline-wrapper>.horizontal-timeline-item>.horizontal-timeline-item-period:before {
+        content: '';
+        height: 0.1rem;
+        position: $absPosition;
+        left: 0px;
+        right: -35px;
+        bottom: 35px;
+        z-index: 1;
+        background-color: $grayback;
+    }
+
+    .horizontal-timeline>.horizontal-timeline-wrapper>.horizontal-timeline-item>.horizontal-timeline-item-period:after {
+        content: '';
+        height: 12px;
+        width: 12px;
+        background-color: $lightbg;
+        position: $absPosition;
+        border-radius: $fullwidth;
+        left: 0px;
+        right: 0px;
+        bottom: 30px;
+        margin: 0px auto;
+        z-index: 1;
+    }
+
+    .horizontal-timeline>.horizontal-timeline-wrapper>.horizontal-timeline-item:nth-child(odd) {
+        .horizontal-timeline-item-text {
+            position: $relPosition;
+            top: 0px;
+        }
+
+        .horizontal-timeline-arrow::after {
+            top: -25px;
+        }
+    }
+
+    .horizontal-timeline>.horizontal-timeline-wrapper>.horizontal-timeline-item:nth-child(even) {
+        .horizontal-timeline-item-text {
+            position: $absPosition;
+            top: 75px;
+        }
+
+        .horizontal-timeline-arrow::after {
+            top: 10px;
+        }
+    }
+
+    .horizontal-timeline>.horizontal-timeline-wrapper>.horizontal-timeline-item:first-of-type>.horizontal-timeline-item-period:before {
+        left: -14px;
+    }
+
+    .horizontal-timeline>.horizontal-timeline-wrapper>.horizontal-timeline-item:last-of-type>.horizontal-timeline-item-period:before {
+        right: -14px;
+    }
+
+    .horizontal-timeline .horizontal-timeline-arrow {
+        position: $relPosition;
+    }
+
+    .horizontal-timeline .horizontal-timeline-arrow::after {
+        content: "";
+        position: $absPosition;
+        left: 0;
+        right: 0;
+        margin: 0px auto;
+        background-color: $grayback;
+        height: 40px;
+        width: 0.1rem;
+    }
+
+    .horizontal-timeline .horizontal-timeline-arrow::before {
+        content: "";
+        position: $absPosition;
+        left: 0;
+        right: 0;
+        top: -2px;
+        z-index: 1;
+        margin: 0px auto;
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        background: rgba(16, 156, 241, 0.35);
+        opacity: 0.25;
+    }
+
+    //import btn view
+    .adddocbtninner {
+        text-align: $alignRT;
+        padding: 0px 0px 0px 0px;
+        position: sticky;
+        left: 0;
+        right: 0;
+
+        span {
+            color: $blkbglight;
+            //font-size: $font13;
+            font-size: 0.85vw;
+            font-family: $PoppinsM;
+            padding: 0px 8px 0px 0px;
+        }
+    }
+
+    .adddocbtn {
+        padding: 0;
+        margin: 0;
+        border: none;
+        background: linear-gradient(180deg, $lightblue 0%, $bluecolor $fullwidth);
+        //width: 29px;
+        //height: 29px;
+        width: 1.89vw;
+        height: 1.89vw;
+        border-radius: 50%;
+        text-align: $alignCT;
+        line-height: 0px;
+
+        img {
+            height: 1.2vw;
+        }
+    }
+}
+
+.eventmodalview {
+    .modal-dialog {
+        width: 325px;
+    }
+
+    .modal-header {
+        padding: 1.5rem 1.6rem 0.2rem 1.6rem;
+    }
+
+    .modal-title {
+        margin: 0;
+        font-size: $font16;
+    }
+
+    .modal-body {
+        padding: 0.4rem 1.7rem 0.1rem 1.7rem;
+    }
+
+    .modal-footer {
+        padding: .25rem .75rem .3rem .75rem;
+    }
+
+    .datepickerviewbox {
+        padding: 0px 0px 12px 0px;
+        position: $relPosition;
+
+        label {
+            color: $silvergray;
+            font-size: $font13;
+            margin: 0 0 4px 0;
+        }
+
+        .react-datepicker-wrapper .datepicker_icon {
+            background-position: 94% 9px;
+        }
+    }
+
+    .envtextarea {
+        .input__fields_property {
+            height: 80px;
+            resize: none;
+        }
+    }
+
+    .DatePicker {
+        z-index: 100;
+
+        .DatePicker__calendarContainer {
+            top: -200px !important;
+            z-index: 99;
+        }
+    }
+}
+
+.submitbtnprofile {
+    background: $bluecolor;
+    border: 1px solid $bluecolor;
+    color: $whitecolor;
+    font-size: 0.9vw;
+    border-radius: 0.2vw;
+    padding: 0.33vw 0.9vw;
+    margin-left: 6px;
+    font-family: $PoppinsM;
+}
+
+.profiledropdown {
+    .css-yk16xz-control {
+        background-color: transparent;
+        border-color: transparent;
+
+        //z-index: 2;
+        &:hover {
+            border-color: transparent;
+        }
+    }
+
+    .css-1pahdxg-control {
+        border-color: transparent;
+
+        &:hover {
+            border-color: transparent;
+            box-shadow: none;
+            background-color: transparent;
+        }
+
+        &:focus-within {
+            box-shadow: none;
+            border: 1px solid transparent;
+            background: transparent;
+        }
+    }
+
+    .css-1okebmr-indicatorSeparator {
+        opacity: 0;
+    }
+
+    /*.css-6q0nyr-Svg {
+        opacity: 0;
+    }*/
+    .css-1hb7zxy-IndicatorsContainer {
+        .css-tlfecz-indicatorContainer {
+
+            /* &:nth-child(2){
+               opacity: 0;
+            }
+            &:nth-child(3){
+                opacity: 0;
+            }*/
+            .css-6q0nyr-Svg {
+                stroke: snow;
+                stroke-width: inherit;
+                cursor: $cursorP;
+            }
+        }
+    }
+
+    .css-1uccc91-singleValue {
+        color: $graydark;
+        font-size: $font13;
+        font-family: $PoppinsR;
+    }
+
+    .css-1n7v3ny-option {
+        color: $graydark;
+        font-size: $font13;
+    }
+
+    .css-yt9ioa-option {
+        color: $graydark;
+        font-size: $font13;
+    }
+
+    .css-9gakcf-option {
+        font-size: $font13;
+    }
+
+    .css-1wa3eu0-placeholder {
+        font-size: $font13;
+    }
+
+    .css-1fhf3k1-control {
+        border-color: transparent;
+        border-radius: 0px;
+
+        .css-109onse-indicatorSeparator {
+            opacity: 0;
+        }
+
+        .css-107lb6w-singleValue {
+            font-size: $font13;
+        }
+    }
+
+    .css-1fhf3k1-control {
+        background-color: $slidewhitebg;
+    }
+}
+
+.focusdropdownmenu {
+    .css-yk16xz-control {
+        border: 1px solid $lightsilver;
+        background: $whitecolor;
+        border-radius: 0px;
+    }
+}
+
+.profilecontainer {
+    .inputfieldview {
+        .react-datepicker-popper {
+            top: $fullwidth !important;
+            transform: inherit !important;
+            right: 0;
+            left: inherit !important;
+        }
+
+        .DatePicker {
+            z-index: inherit;
+
+            .DatePicker__calendarContainer {
+                top: $fullwidth !important;
+                transform: inherit !important;
+                right: 0;
+                left: inherit !important;
+                z-index: 99;
+            }
+        }
+    }
+}
+
+/* **************22-10-21*************** */
+
+.mdifyCounterstab {
+    //height: 24vw;
+    //height: 26vw;
+    padding: 3.1vw 5.9vw 0px 2.6vw !important;
+    // overflow-y: auto;
+    // direction: ltr;
+    // scrollbar-color: $greybg $whitecolor;
+    // -moz-scrollbar-color: $greybg $whitecolor;
+    // -webkit-scrollbar-color: $greybg $whitecolor;
+    // scrollbar-width: thin;
+    // &::-webkit-scrollbar{
+    //     height: 7px;
+    //     width: 7px;
+    //     background: $greybg;
+    // }
+    // &::-webkit-scrollbar-thumb{
+    //     background: $greybg
+    // }
+
+    .countersUnderAggrid {
+        height: 41vh;
+        padding: 0 0vw 0 0vw;
+
+        .ag-root-wrapper {
+            border-width: 0px !important;
+            border-radius: 10px;
+        }
+
+        .ag-body-viewport {
+            padding: 0 0vw 0 4vw;
+        }
+
+        .ag-cell {
+            line-height: 50px !important;
+            text-align: center;
+
+            &:first-child {
+                text-align: left;
+                font-weight: 600;
+                color: $bluebg;
+                font-size: 0.97vw;
+            }
+
+            &:last-child {
+                text-align: center;
+            }
+        }
+
+        .ag-header-cell {
+            &:first-child {
+                .ag-header-cell-text {
+                    margin: 0px;
+                }
+            }
+        }
+
+        .ag-header-cell-text {
+            color: $bluedarkun;
+            opacity: 0.75;
+            font-family: $PoppinsM;
+            margin: 0px auto;
+        }
+
+        .ag-header {
+            padding: 0 0vw 0 4vw;
+        }
+
+        .ag-row {
+            border-width: 0px;
+        }
+    }
+
+    .status_btn {
+        .statusicon {
+            height: 12px;
+            position: relative;
+        }
+
+        span {
+            color: $whitecolor;
+            padding: 0.3vw 0.4vw;
+            border-radius: 0.8vw;
+            font-size: 11px;
+        }
+    }
+
+    .status_applied {
+        .statusicon {
+            top: -0.1px;
+        }
+
+        span {
+            background-color: $yellowsetFF;
+            padding: 0.3vw 0.8vw;
+        }
+    }
+
+    .status_approved {
+        .statusicon {
+            top: -0.1px;
+        }
+
+        span {
+            background-color: $green08;
+        }
+    }
+
+    .status_rejected {
+        .statusicon {
+            top: -0.1px;
+        }
+
+        span {
+            background-color: $redColor;
+            padding: 0.3vw 0.7vw;
+        }
+    }
+
+    .comuplabel {
+        font-size: 13px;
+        line-height: 19px;
+        letter-spacing: 0.01em;
+        color: $green08;
+        font-family: $PoppinsM;
+    }
+
+    .expiredlabel {
+        font-size: 13px;
+        line-height: 19px;
+        letter-spacing: 0.01em;
+        color: $redColor;
+        font-family: $PoppinsM;
+    }
+}
+
+.progressBoxes {
+    width: 100%;
+    display: inline-block;
+    white-space: nowrap;
+    overflow-x: auto;
+    direction: ltr;
+    scrollbar-color: $greybg $whitecolor;
+    -moz-scrollbar-color: $greybg $whitecolor;
+    -webkit-scrollbar-color: $greybg $whitecolor;
+    scrollbar-width: thin;
+    min-height: 17vw;
+
+    &::-webkit-scrollbar {
+        height: 7px;
+        width: 7px;
+        background: $greybg;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $greybg
+    }
+
+    .progressBarGrid {
+        width: 15.7vw;
+        display: inline-block;
+        padding: 0px 1vw;
+        margin: 0px 0px 0.6vw 0px;
+    }
+
+    .progressBox {
+        width: 100%;
+        padding: 0.4vw;
+        background: $whitecolor;
+        box-shadow: 0px 0.25vw 0.2vw rgba(0, 0, 0, 0.25);
+        border-radius: 0.6vw;
+        height: 19.54vw;
+
+        h4 {
+            color: $bluedark;
+            font-size: 1vw;
+            line-height: 1.7vw;
+            text-align: center;
+            padding-top: 1vw;
+            margin-bottom: 0.6vw;
+        }
+
+        .progBox {
+            width: 100%;
+            display: $inblock;
+            padding: 0.75vw 1.6vw;
+
+            .innprogBox {
+                font-size: 1vw;
+                line-height: 1.7vw;
+                text-align: center;
+                color: $slidegreybg;
+                font-family: $PoppinsM;
+
+                strong {
+                    font-weight: 500;
+                }
+            }
+        }
+
+        ul {
+            display: flex;
+            padding: 0px 1vw;
+            margin-top: 1vw;
+            margin-bottom: 1vw;
+
+            li {
+                color: $blkbgun;
+                font-weight: 500;
+                list-style-type: none;
+                font-family: $PoppinsM;
+                position: $relPosition;
+                font-size: 0.75vw;
+                line-height: 1.1vw;
+                padding-left: 0.8vw;
+
+                span {
+                    font-weight: 400;
+                    color: $gray9;
+                    padding-left: 0.3vw;
+                    font-size: 0.9vw;
+                }
+
+                .totalleaves {
+                    width: 0.55vw;
+                    height: 0.55vw;
+                    border-radius: 50%;
+                    display: $inblock;
+                    margin-right: 0.3vw;
+                    position: relative;
+                    top: 0.35vw;
+                }
+
+                .usedleaves {
+                    width: 0.55vw;
+                    height: 0.55vw;
+                    border-radius: 50%;
+                    display: $inblock;
+                    margin-right: 0.3vw;
+                    position: relative;
+                    top: 0.35vw;
+                }
+            }
+
+            li:first-child {
+                margin-right: auto;
+            }
+        }
+
+    }
+}
+
+.bottompanelBoxes {
+    width: 100%;
+    margin-top: 1.5vw;
+    margin-bottom: 1vw;
+    ;
+
+    .bottomPanel {
+        width: 100%;
+        float: $fl;
+        position: $relPosition;
+        margin: 0 0 0 1vw;
+
+        .leftbtnpanel {
+            background: $whitecolor;
+            border: 1px solid $lightsilver;
+            padding: 0.8vw 3vw 0.8vw 3.5vw;
+            border-radius: 0.7vw;
+            position: relative;
+            min-width: 17.5vw;
+            text-align: left;
+            font-size: 1vw;
+            font-family: $PoppinsR;
+
+            i {
+                position: $absPosition;
+                font-size: 2vw;
+                right: 1vw;
+                top: 0.4vw;
+            }
+
+        }
+
+        .bottompanelPopUpBox {
+            width: 100%;
+            height: 380px;
+            background: $whitecolor;
+            border: 1px solid $lightsilver;
+            border-radius: 10px;
+            position: $absPosition;
+            left: 0;
+            top: 0;
+            display: $displayNone;
+            padding: 11.5px 15;
+            -moz-transition: all 0.5s ease-in-out;
+            -o-transition: all 0.5s ease-in-out;
+            -webkit-transition: all 0.5s ease-in-out;
+            -ms-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;
+
+            .headingbottompanelPopUpBox {
+                width: 100%;
+                position: $relPosition;
+
+                h4 {
+                    color: $bluedark;
+                    font-size: 1vw;
+                    padding: 0.8vw 0vw 1vw 4.6vw;
+                    margin: 0;
+                    font-family: $PoppinsR;
+                }
+
+                .closebtnPopUpBox {
+                    position: $absPosition;
+                    right: 10px;
+                    top: 0px;
+                    width: 40px;
+                    height: 40px;
+                    font-size: 30px;
+                    line-height: 35px;
+                    transform: rotate(90deg);
+                    background: transparent;
+                    border: none;
+                    color: $lightbg;
+                }
+            }
+
+            .bodybottompanelPopUpBox {
+                width: 100%;
+                padding: 0 0vw;
+            }
+        }
+
+        .bottompanelPopUpBox.show {
+            display: $displayBlock;
+        }
+    }
+
+    .bottomPanelRight {
+        width: 100%;
+
+        .rightbtnpanel {
+            background: $whitecolor;
+            border: 1px solid $lightsilver;
+            padding: 0.8vw 3vw 0.8vw 0.7vw;
+            border-radius: 0.7vw;
+            font-size: 1vw;
+            position: $relPosition;
+            background: url(../images/btn2.png) $whitecolor no-repeat;
+            background-size: 1.3vw;
+            background-position: right 12px center;
+            font-family: $PoppinsR;
+        }
+    }
+}
+
+.modifyCountersModal {
+    .modal-content {
+        padding: 5px 0px 30px;
+        background: $whitesetF9;
+        width: 428px;
+
+        .modal-header {
+            padding: 2rem 2.5rem 0rem 2.5rem;
+
+            .modal-title {
+                font-size: 28px;
+                line-height: 36px;
+                color: $deepbluebg;
+                font-family: $PoppinsR;
+
+                span {
+                    display: $displayBlock;
+                    color: $silverlight;
+                    font-size: $font13;
+                    line-height: 20px;
+                    position: $relPosition;
+                }
+            }
+
+            .comptbtn {
+                width: 32px;
+                height: 38px;
+                background: url(../images/btn1.png) no-repeat;
+                background-size: contain;
+                border: none;
+                margin-left: 20px;
+                position: $absPosition;
+                right: -60px;
+                top: -5px;
+                border-radius: 35%;
+            }
+        }
+
+        .modal-body {
+            padding: 0.4rem 1rem 0.4rem 2.5rem;
+            padding-top: 40px;
+
+            .modal-title {
+                font-size: 28px;
+                line-height: 36px;
+                color: $deepbluebg;
+                font-family: $PoppinsR;
+                position: $absPosition;
+                left: 40px;
+                top: 0;
+
+                span {
+                    display: $displayBlock;
+                    color: $silverlight;
+                    font-size: $font13;
+                    line-height: 20px;
+                    position: $relPosition;
+                }
+            }
+
+            .comptbtn {
+                width: 32px;
+                height: 38px;
+                background: url(../images/btn1.png) no-repeat;
+                background-size: contain;
+                border: none;
+                margin-left: 20px;
+                position: $absPosition;
+                right: -60px;
+                top: -5px;
+                border-radius: 35%;
+            }
+
+            .modalinnerbody.eventinnerbox {
+                margin-top: 15px;
+                padding-right: 1.5rem;
+                overflow-y: auto;
+                overflow-x: hidden;
+                direction: ltr;
+                max-height: 50vh;
+                scrollbar-color: $silvergray $whitecolor;
+                -moz-scrollbar-color: $silvergray $whitecolor;
+                -webkit-scrollbar-color: $silvergray $whitecolor;
+                scrollbar-width: thin;
+            }
+
+            ul {
+                width: 100%;
+                display: $inblock;
+                margin: 0px;
+                padding: 0px;
+
+                li {
+                    display: flex;
+                    color: $bluedarkun;
+                    font-size: $font17;
+                    line-height: 26px;
+                    font-family: $PoppinsR;
+                    padding: 15px 0px;
+                    justify-content: start;
+                    align-items: center;
+                }
+            }
+        }
+
+        .modal-footer {
+            justify-content: center;
+            border: none;
+            margin-top: 20px;
+
+            button {
+                background: $lightbg;
+                padding: 4px 10px;
+                font-size: $font13;
+                box-shadow: 0px 2px 3px 1px rgba(16, 156, 241, 0.24);
+                border-color: $lightbg;
+
+                &:disabled {
+                    background: $silverlightbg;
+                    border: 1px solid $silverlightbg;
+                }
+            }
+        }
+    }
+}
+
+.checkmodalcontent {
+    .close_btn_icon .close::before {
+        top: -11px;
+    }
+}
+
+.modifyCountersModal .modal-content .modal-body ul.count {
+    width: auto;
+    margin-left: auto;
+
+    li {
+        display: $inblock;
+        padding: 0px 2.5px;
+
+        button {
+            background: $whitecolor;
+            border: none;
+            color: rgba(16, 156, 241, 0.3);
+            height: 25px;
+            width: 25px;
+            line-height: 25px;
+            padding: 0px;
+            outline: none;
+            box-shadow: 0px 7px 64px rgba(0, 0, 0, 0.07);
+            border-radius: 8px;
+            font-weight: 500;
+            outline: none;
+        }
+
+        strong {
+            width: 32px;
+            text-align: $alignCT;
+            background: $whitecolor;
+            height: 30px;
+            line-height: 30px;
+            color: $blueset43;
+            font-family: $PoppinsR;
+            display: $inblock;
+            font-weight: 400;
+            box-shadow: 0px 7px 64px rgba(0, 0, 0, 0.07);
+            border-radius: 8px;
+            font-size: $font15;
+        }
+
+    }
+}
+
+.CountersModal .modal-dialog {
+    width: 290px;
+    display: flex !important;
+    pointer-events: none;
+    justify-content: center;
+    align-items: center;
+    margin: 190px auto;
+
+    .modal-content {
+        border-radius: 0.8rem;
+        border: 0px solid rgba(0, 0, 0, 0.2);
+    }
+
+    .subBtnInner {
+        text-align: center;
+        padding: 1vw 0 0 0;
+    }
+
+    .counterschecksubBtn {
+        background: $lightbg;
+        padding: 4px 10px;
+        font-size: $font13;
+        box-shadow: 0px 2px 3px 1px rgba(16, 156, 241, 0.24);
+        border-color: $lightbg;
+
+        &:disabled {
+            background: $silverlightbg;
+            border: 1px solid $silverlightbg;
+        }
+    }
+}
+
+.CountersModal {
+    .modal-header {
+        display: $inblock;
+        padding: 15px 20px 0px;
+        border: none;
+
+        .modal-title {
+            color: $deepbluebg;
+            font-size: 26px;
+            line-height: 39px;
+            font-family: $PoppinsR;
+        }
+
+        p {
+            width: 100%;
+            display: $inblock;
+            color: $silverlight;
+            font-size: $font12;
+            line-height: 18px;
+            font-family: $PoppinsR;
+            margin: 0px;
+        }
+    }
+
+    .modal-body {
+        padding: 15px 20px 15px 40px;
+
+        .modal-title {
+            color: $deepbluebg;
+            font-size: 26px;
+            line-height: 39px;
+            font-family: $PoppinsR;
+            position: $absPosition;
+            left: 20px;
+            top: -12px;
+
+            p {
+                width: 100%;
+                display: $inblock;
+                color: $silverlight;
+                font-size: $font12;
+                line-height: 18px;
+                font-family: $PoppinsR;
+                margin: 0px;
+            }
+        }
+
+        ul {
+            margin: 0px;
+            padding: 0;
+            padding-right: 20px;
+            margin-top: 20px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            direction: ltr;
+            max-height: 60vh;
+            scrollbar-color: $silvergray $whitecolor;
+            -moz-scrollbar-color: $silvergray $whitecolor;
+            -webkit-scrollbar-color: $silvergray $whitecolor;
+            scrollbar-width: thin;
+
+            li {
+                color: $bluedarkun;
+                font-size: $font14;
+                line-height: 26px;
+                font-family: $PoppinsR;
+                display: $inblock;
+                width: 100%;
+                padding: 3px 0px;
+
+                .custom_checkbox_tick {
+                    color: $bluedarkun;
+                    font-size: $font14;
+                    line-height: 26px;
+                    font-family: $PoppinsR;
+                    display: $inblock;
+                    padding: 0;
+                    width: 100%;
+                    padding-right: 25px;
+                    position: $relPosition;
+                    cursor: $cursorP;
+                    margin-bottom: 0px;
+
+                    input {
+                        position: $absPosition;
+                        opacity: 0;
+                        cursor: $cursorP;
+                        height: 0;
+                        width: 0;
+                    }
+
+                    .checkmarkCheckbox {
+                        position: $absPosition;
+                        top: 1px;
+                        left: inherit;
+                        height: 23px;
+                        width: 23px;
+                        background-color: $whitecolor;
+                        border: 0.1rem solid $whitebg !important;
+                        box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.07) !important;
+                        border-radius: 5px;
+                        right: 0;
+
+                        &::after {
+                            content: "";
+                            position: $absPosition;
+                            left: 7px;
+                            width: 6px;
+                            height: 12px;
+                            top: 3px;
+                            border: solid white;
+                            border-width: 0 3px 3px 0;
+                            -webkit-transform: rotate(45deg);
+                            -ms-transform: rotate(45deg);
+                            transform: rotate(45deg);
+                            border-color: $whitecolor !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.CountersModal.show {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.CountersModal .custom_checkbox_tick input:checked~.checkmarkCheckbox::after {
+    display: $displayBlock;
+}
+
+.CountersModal .custom_checkbox_tick input:checked~.checkmarkCheckbox {
+    background-color: rgba(20, 204, 158, 1) !important;
+}
+
+.btn-primary.focus,
+.btn-primary:focus {
+    border-color: inherit !important;
+    box-shadow: inherit !important;
+}
+
+
+/* skills Tab */
+.mdifySkillstab {
+    padding: 0.6vw 0vw 0vw 2vw !important;
+    margin-top: 2vw;
+    height: 25vw;
+    overflow-y: auto;
+    direction: ltr;
+    scrollbar-color: $whitecolor $whitecolor;
+    -moz-scrollbar-color: $whitecolor $whitecolor;
+    -webkit-scrollbar-color: $whitecolor $whitecolor;
+    scrollbar-width: thin;
+
+    .skillsCustomTabsInner {
+        width: 100%;
+        display: inline-block;
+        margin: 0 0 2vw 0;
+
+        span {
+            background: $lightgraybg;
+            border: 1px solid $lightsilver;
+            box-sizing: border-box;
+            border-radius: 20px;
+            display: inline-block;
+            font-size: 1.1vw;
+        }
+
+        .skillsCustomTabs {
+            width: auto;
+            display: inline-block;
+            min-width: 7.8vw;
+            cursor: pointer;
+            padding: 0.53vw 1vw;
+            color: $lightdarkbg;
+            text-align: center;
+        }
+
+        .active_category_skill {
+            background: linear-gradient(180deg, $lightbg 0%, $bluecolor 100%);
+            box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.25);
+            border-radius: 20px;
+            color: $whitecolor;
+        }
+
+    }
+
+    .skillsCustomSubTabsInner {
+        overflow-x: auto;
+        white-space: nowrap;
+        scrollbar-color: $silvergray $whitecolor;
+        -moz-scrollbar-color: $silvergray $whitecolor;
+        -webkit-scrollbar-color: $silvergray $whitecolor;
+        scrollbar-width: thin;
+        padding-bottom: 10px;
+
+        .active_course_skill {
+            color: $whitecolor !important;
+        }
+    }
+
+    .skillsCustomSubTabs {
+        width: auto;
+        display: inline-block;
+        min-width: 7.8vw;
+        padding: 0.53vw 0.2vw;
+        text-align: center;
+        margin: 0 0.7vw;
+        border-radius: 0.4vw;
+        cursor: pointer;
+        font-size: 1.1vw;
+
+        &:first-child {
+            margin-left: 0px;
+        }
+    }
+}
+
+.topSkillstab {
+    width: auto;
+    display: $inblock !important;
+    background: $whitecolor;
+    border: 1px solid $lightsilver;
+    border-radius: 30px;
+
+    a.nav-item {
+        display: $inblock;
+        text-align: $alignCT;
+        color: $lightdarkbg;
+        font-family: $PoppinsR;
+        padding: 0.6vw 0.5vw;
+        border-radius: 2vw;
+        min-width: 8.2vw;
+        font-size: 1vw;
+        line-height: 1.3vw;
+    }
+
+    .nav-item.nav-link.active {
+        background: $lightbg;
+        color: $whitecolor;
+        border: 1px solid $lightbg;
+    }
+
+    .nav-item.nav-link:hover {
+        border: 1px solid transparent;
+    }
+}
+
+.bottomSkillstabDetails {
+    background: transparent;
+    border: none !important;
+    border-radius: 0px;
+    margin-top: 1.5vw;
+
+    a.nav-item {
+        padding: 0.4vw 0.5vw;
+        border-radius: 0.5vw;
+        min-width: 8.2vw;
+        font-size: 1vw;
+        line-height: 1.8vw;
+        height: 2.7vw;
+        text-align: $alignCT;
+        color: $yellowsetFF;
+        font-family: $PoppinsR;
+        background: $whitecolor;
+        border: 1px solid $yellowsetFF;
+        box-sizing: border-box;
+        margin: 0px 0.7vw;
+    }
+
+    .nav-item.nav-link.active {
+        background: $yellowsetFF;
+        color: $whitecolor;
+        border: 1px solid $yellowsetFF;
+    }
+
+    .nav-item.nav-link:hover {
+        border: 1px solid $yellowsetFF;
+    }
+
+    a.nav-item:first-child {
+        margin-left: 0px !important;
+    }
+
+}
+
+.skillTabModify {
+    white-space: nowrap;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: auto;
+    scrollbar-color: $silvergray $whitecolor;
+    -moz-scrollbar-color: $silvergray $whitecolor;
+    -webkit-scrollbar-color: $silvergray $whitecolor;
+    scrollbar-width: thin;
+
+    .skillTab {
+        border-radius: 0.5vw;
+        padding: 0.4vw 0.5vw;
+    }
+
+    a.nav-item {
+        border: 1px solid transparent !important;
+        color: $whitecolor;
+        padding: 0;
+    }
+
+    .nav-item.nav-link.active {
+        background: transparent !important;
+        color: $whitecolor;
+        border: 1px solid transparent !important;
+    }
+}
+
+.bottomSkillstabDetails a.nav-item.nav-link.disabled {
+    color: $slidewhite !important;
+    background-color: transparent;
+    border-color: $slidewhite !important;
+}
+
+.mdifySkillstab .table-responsive {
+    width: auto;
+}
+
+.mdifySkillstab .table {
+    width: auto;
+}
+
+.mdifySkillstab .table tr th {
+    color: $silvergray;
+    font-size: 1vw;
+    line-height: 1.5vw;
+    padding: 0.4vw 0.8vw;
+    text-align: $alignCT;
+    border: none;
+    font-weight: 400;
+}
+
+.mdifySkillstab .table tr td {
+    color: $blackset3E;
+    border: none;
+    line-height: 1.5vw;
+    padding: 0.4vw 0.8vw;
+    border: none;
+    font-size: 0.9vw;
+}
+
+.mdifySkillstab .table tr:hover {
+    background: transparent;
+}
+
+
+/* /////// traning /////////// */
+
+.mdifyTraningtab {
+    padding: 0.6vw 2vw 0vw 2vw !important;
+    margin-top: 1.5vw;
+    height: 25vw;
+    overflow-y: auto;
+    direction: ltr;
+    scrollbar-color: $whitecolor $whitecolor;
+    -moz-scrollbar-color: $whitecolor $whitecolor;
+    -webkit-scrollbar-color: $whitecolor $whitecolor;
+    scrollbar-width: thin;
+
+    .tab-content {
+        padding-top: 1.5vw !important;
+    }
+}
+
+.mdifyTraningtab .topSkillstab {
+    border-radius: 0.6vw;
+    padding: 0.25vw;
+
+    a.nav-item {
+        border-radius: 0.5vw;
+        padding: 0.45vw 1vw;
+        min-width: 7.8vw;
+        font-size: 0.9vw;
+    }
+}
+
+.mdifySkillstab .table-responsive h5 {
+    font-family: $PoppinsR;
+    font-weight: 600;
+    line-height: 1.3vw;
+    font-size: 1.1vw;
+    color: $bluedark;
+    margin: 2vw 0px 0.5vw 0px;
+}
+
+.traningtabContent {
+    width: 45vw;
+    min-height: 16.5vw;
+    border-radius: 0.6vw;
+    padding: 0.9vw 1.4vw;
+    background: $whitecolor;
+    border: 1px solid $lightsilver;
+
+    h4 {
+        position: $relPosition;
+        color: $graydarkcommon;
+        font-family: $PoppinsR;
+        font-weight: 600;
+        font-weight: 600;
+        font-size: 1.3vw;
+        line-height: 2vw;
+        margin: 0.6vw 0vw 0.5vw 0;
+        padding-left: 3.5vw;
+        display: inline-block;
+
+        &::after {
+            content: '';
+            position: $absPosition;
+            width: 1.6vw;
+            height: 1.6vw;
+            left: 0.9vw;
+            top: 0vw;
+            background: url('../images/erroricon.png') no-repeat;
+            background-size: contain !important;
+        }
+    }
+
+    .going_to_expire_user {
+        margin: 0.6vw 0.5vw 0.5vw 0;
+
+        &::after {
+            background: url('../images/warning.png') no-repeat;
+        }
+    }
+
+    ul {
+        margin: 1.5vw 0 0 0 !important;
+        padding: 0px;
+
+        li {
+            padding: 0.4vw 0px;
+            margin: 0px;
+            display: $inblock;
+            text-align: $alignLT;
+            width: 100%;
+            line-height: 26px;
+            color: $bluebg;
+            font-size: 0.8vw;
+
+            span {
+                width: 25%;
+                float: left;
+            }
+        }
+    }
+
+    .table thead th {
+        border: none;
+        color: $silvergray;
+        font-size: 0.9vw;
+        line-height: 1.5vw;
+        padding: 0.4vw;
+        font-weight: 600;
+        text-align: $alignCT;
+    }
+
+    .table tbody tr td {
+        color: $blackset3E;
+        font-size: 0.75vw;
+        padding: 0.4vw;
+        line-height: 1.5vw;
+        font-weight: 400;
+        border-top: none;
+        border-bottom: 1px solid $lightsilver;
+        text-align: $alignCT;
+
+        em {
+            font-style: normal;
+        }
+
+        em.succeeded {
+            color: $lightgreen;
+        }
+
+        em.failure {
+            color: $lightred;
+        }
+    }
+
+    .table-hover tbody tr:hover {
+        background-color: transparent;
+    }
+}
+
+
+/* /////// Attendance /////////// */
+.mdifyAttendancetab {
+    //padding: 2.2vw 0vw 1vw 1.5vw !important;
+    padding: 1.5vw 0vw 1vw 1.5vw !important;
+    height: 26vw;
+
+    .attendancetabContent {
+        width: 100%;
+
+        .progressBoxesAttendancetab {
+            width: 100%;
+
+            .row {
+                margin: 4px 0 6px 0;
+                flex-wrap: nowrap;
+
+                .col {
+                    max-width: 140px;
+                    padding-right: 18px;
+                    padding-left: 18px;
+                }
+            }
+
+            .attendprogressBoxInner {
+                width: 60vw;
+                display: inline-block;
+                white-space: nowrap;
+                overflow-x: auto;
+                direction: ltr;
+                scrollbar-color: $greybg $whitecolor;
+                -moz-scrollbar-color: $greybg $whitecolor;
+                -webkit-scrollbar-color: $greybg $whitecolor;
+                scrollbar-width: thin;
+
+                &::-webkit-scrollbar {
+                    height: 7px;
+                    width: 7px;
+                    background: $greybg;
+                }
+
+                &::-webkit-scrollbar-thumb {
+                    background: $greybg
+                }
+            }
+
+            .attendprogressBox {
+                display: flex;
+                height: 83px;
+                min-width: 106px;
+                justify-content: center;
+                align-items: center;
+                background: $whitecolor;
+                box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+                border-radius: 6px;
+                color: $bluedarkun;
+                font-size: 30px;
+                line-height: 45px;
+            }
+
+            .inprogresslabel {
+                font-size: 0.91vw;
+                ;
+                line-height: 26px;
+                color: $bluebg;
+                font-family: $PoppinsM;
+                width: 8vw;
+                display: inline-block;
+                vertical-align: top;
+                padding: 2vw 0 0 0;
+            }
+
+            .attendprogressBox.pinkBox {
+                border-left: 4px solid $pinklight;
+            }
+
+            .attendprogressBox.skyBox {
+                border-left: 4px solid $lightblueun;
+            }
+
+            .attendprogressBox.lightorgBox {
+                border-left: 4px solid $yellowdeep;
+            }
+
+            .attendprogressBox.yellowBox {
+                border-left: 4px solid $yellowlightset;
+            }
+
+            .attendprogressBox.orgBox {
+                border-left: 4px solid $yellowdeepun;
+            }
+
+            .attendprogressBox.violetBox {
+                border-left: 4px solid $pink;
+            }
+        }
+
+        .historicalOutBox {
+            width: auto;
+            min-width: 42.3vw;
+            height: 16vw;
+            overflow: auto;
+            direction: ltr;
+            scrollbar-color: $greybg $whitecolor;
+            -moz-scrollbar-color: $greybg $whitecolor;
+            -webkit-scrollbar-color: $greybg $whitecolor;
+            scrollbar-width: thin;
+            margin-left: 10vw;
+            margin-top: 1vw;
+
+            &::-webkit-scrollbar {
+                height: 7px;
+                width: 7px;
+                background: $greybg;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background: $greybg
+            }
+        }
+
+        .historicalBox {
+            width: auto;
+            display: inline-block;
+            min-width: 42.3vw;
+            min-height: 15.5vw;
+            height: auto;
+            background: $whitecolor;
+            border: 0.1rem solid $lightsilver;
+            border-radius: 8px;
+            padding: 20px;
+
+            h4 {
+                color: $bluebg;
+                font-size: 12.5px;
+                line-height: 26px;
+                font-family: $PoppinsR;
+                font-weight: 600;
+                margin: 0px;
+            }
+
+            .table {
+                margin: 0px;
+            }
+
+            .table tbody tr td {
+                color: $silverlight;
+                line-height: 36px;
+                padding: 5px;
+                font-weight: 600;
+                font-family: $PoppinsR;
+                border-top: inherit;
+                border-bottom: 0.5px solid $lightsilver;
+                width: 100px;
+                font-size: 14px;
+                letter-spacing: 0.01em;
+
+                span {
+                    border: 0.1rem solid $lightsilver;
+                    padding: 8px 4px;
+                    margin-right: 4px;
+                    border-radius: 4px;
+                    font-size: 13px;
+                    line-height: 19px;
+                    text-align: center;
+                    font-family: $PoppinsR;
+                    letter-spacing: 0.01em;
+                    color: $black0B;
+                    opacity: 0.5;
+                }
+            }
+
+            .table tr:hover {
+                background: transparent;
+            }
+
+            .table tbody tr td:first-child {
+                padding-left: 3.5vw;
+                width: auto;
+                font-weight: 400;
+                color: $bluebg;
+            }
+
+            .table tbody tr td:last-child {
+                padding-right: 3.5vw;
+            }
+
+            .historytableinner {
+                width: 100%;
+                display: inline-block;
+
+                .historytablerow {
+                    width: 100%;
+                    display: inline-block;
+                    border-bottom: 0.1rem solid $lightsilver;
+                    padding: 6px 0px 6px 0;
+                    white-space: nowrap;
+
+                    .historynamebox {
+                        display: inline-block;
+                        color: $bluebg;
+                        line-height: 36px;
+                        font-weight: 600;
+                        font-family: $PoppinsR;
+                        min-width: 210px;
+                        font-size: 14px;
+                        letter-spacing: 0.01em;
+                        padding-left: 3.5vw;
+                    }
+
+                    .historyshiftbox {
+                        display: inline-block;
+                        min-width: 90px;
+                        color: $silverlight;
+                        line-height: 36px;
+                        font-family: $PoppinsM;
+                        font-size: 14px;
+                        letter-spacing: 0.01em;
+
+                        .historycountbox {
+                            border: 0.1rem solid $lightsilver;
+                            padding: 8px 6px;
+                            margin-right: 6px;
+                            border-radius: 4px;
+                            font-size: 13px;
+                            line-height: 19px;
+                            text-align: center;
+                            font-family: $PoppinsM;
+                            letter-spacing: 0.01em;
+                            color: $black0B;
+                            opacity: 0.5;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .noDataAvailable {
+        font-size: 15px;
+        text-align: center;
+    }
+}
+
+//apply leave request
+.applyLeaveTab {
+    padding: 1vw 0px 0px 0px !important;
+
+    .gridActionBtnInner {
+        width: 100%;
+        display: $inblock;
+    }
+
+    .applyLeaveBtn {
+        background: $lightskybg;
+        border: 1px solid $lightskybg;
+        color: $whitecolor;
+        font-size: 0.9vw;
+        border-radius: 0.5vw;
+        padding: 0.4vw 0.9vw;
+        float: right;
+    }
+
+    .agViewBox {
+        .aggridview {
+            height: 48vh;
+        }
+
+        .ag-body-viewport {
+            max-height: 40vh;
+        }
+    }
+
+    .actionbtninner {
+        text-align: right;
+    }
+
+    .approvedbtn {
+        background: $whiteColor;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        border: 1px solid $whiteColor;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        line-height: 0;
+        color: $deepgrn;
+        font-size: 16px;
+
+        img {
+            height: 16px;
+        }
+    }
+
+    .unapprovedbtn {
+        background: $whiteColor;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        border: 1px solid $whiteColor;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        line-height: 0;
+        color: $lightRedColor;
+        font-size: 16px;
+        margin-left: 10px;
+        margin-right: 20px;
+
+        img {
+            height: 14px;
+        }
+    }
+}
+
+.newleaveRequestModal {
+    .modal-body {
+        padding: 0rem 0rem 1rem 1rem;
+    }
+
+    .datepickerinnerbox {
+        .DatePicker {
+            .DatePicker__calendarContainer {
+                transform: inherit !important;
+                right: 0;
+                left: inherit !important;
+                z-index: 99;
+            }
+        }
+    }
+
+    .ofdatepicker {
+        .DatePicker {
+            .DatePicker__calendarContainer {
+                transform: inherit !important;
+                right: inherit;
+                left: 0 !important;
+                z-index: 99;
+            }
+        }
+    }
+
+    .modal-dialog {
+        /*overflow-y: auto;
+		overflow-x: hidden;
+		display: inline-grid !important;
+		border-radius: 0.8rem;
+        width: 100%;
+        max-width: 100%;
+		&::-webkit-scrollbar {
+			width: 5px;
+		}*/
+        width: 455px;
+    }
+
+    /*.modal-content{
+        width: 455px;
+    }*/
+    /*.modal-header{
+		position: sticky;
+		width: 455px;
+		z-index: 99;
+		top: 0;
+		background: $whitecolor;
+		border-top-left-radius: 0.8rem;
+		border-top-right-radius: 0.8rem;
+	}*/
+}
+
+.newLeaveRequestrBox {
+    width: 100%;
+    margin: 0 auto;
+    min-height: 75vh;
+    max-height: 75vh;
+    padding: 0px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    direction: ltr;
+    //max-height: 300px;
+    scrollbar-color: $silvergray $whitebglight;
+    -moz-scrollbar-color: $silvergray $whitebglight;
+    -webkit-scrollbar-color: $silvergray $whitebglight;
+    scrollbar-width: thin;
+    padding-right: 1rem;
+
+    .viewButtonRow {
+        width: 100%;
+        float: left;
+        text-align: left;
+        margin: 6px 0 0px 0;
+
+        .viewbtn {
+            background: $blue42;
+            border-radius: 6px;
+            border: 1px solid $blue42;
+            padding: 1px 10px;
+            font-size: 13px;
+            color: $whitecolor;
+            font-family: $PoppinsM !important;
+        }
+
+        .removebtn {
+            background: $lightRedColor;
+            border-radius: 6px;
+            border: 1px solid $lightRedColor;
+            padding: 1px 6px;
+            font-size: 13px;
+            color: $whitecolor;
+            font-family: $PoppinsM !important;
+            width: 70px;
+        }
+    }
+
+    .shiftDetailsViewRow {
+        margin: 4px 0px 0 0;
+        border: 0.1rem solid $whitebg;
+        padding: 4px 8px 0px 8px;
+        border-radius: 6px;
+        width: 100%;
+        float: left;
+        overflow-y: auto;
+        max-height: 150px;
+        scrollbar-color: $silvergray $whitebglight;
+        -moz-scrollbar-color: $silvergray $whitebglight;
+        -webkit-scrollbar-color: $silvergray $whitebglight;
+        scrollbar-width: thin;
+
+        .shiftDetailsbox {
+            padding: 0;
+            list-style: none;
+            text-align: left;
+            margin: 0;
+
+            li {
+                font-size: 13px;
+                color: $silvergray;
+                margin: 0 0 4px 0;
+            }
+        }
+    }
+}
+
+.leavereqHeading {
+    width: 100%;
+    display: inline-block;
+
+    .bkbtn {
+        width: 40px;
+        height: 40px;
+        background: transparent;
+        font-size: 28px;
+        line-height: 40px;
+        float: left;
+        border: none;
+        color: $blue20;
+    }
+
+    h3 {
+        color: $blue20;
+        font-size: 20px;
+        font-family: $PoppinsM;
+        line-height: 40px;
+    }
+}
+
+.newReqTabBoxes {
+    width: 100%;
+    display: inline-block;
+    margin-top: 25px;
+    text-align: center;
+
+    .tab-content {
+        padding-top: 20px;
+
+        .row:nth-child(2).rowbox {
+            .datepickerinnerbox {
+                .DatePicker {
+                    .DatePicker__calendarContainer {
+                        top: 100% !important
+                    }
+                }
+            }
+        }
+    }
+
+    .nav-tabs {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid $graye9;
+        border-radius: 30px;
+    }
+
+    .nav-tabs .nav-link {
+        color: $gray9D !important;
+        font-size: 18px;
+        padding: 10px 60px;
+        border-radius: 30px;
+
+        &:hover {
+            border: 1px solid transparent;
+        }
+    }
+
+    .nav-tabs .nav-link.active {
+        background: $blue42 !important;
+        color: $whitecolor !important;
+        border: 1px solid transparent;
+    }
+
+    .dropdowninnerbox {
+        position: $relPosition;
+        padding: 0px 0px 3px 0px;
+        text-align: left;
+
+        label {
+            color: $silvergray;
+            font-size: $font13;
+            margin: 0;
+        }
+
+        .css-yk16xz-control {
+            border-color: $whitebg;
+            border-radius: 6px;
+            border-width: 0.1rem;
+            min-height: 41px;
+
+            &:hover {
+                border-color: $whitebg;
+            }
+
+            &:focus {
+                outline: none;
+                border: none;
+            }
+        }
+
+        .css-1pahdxg-control {
+            min-height: 41px;
+            border-color: $whitebg;
+            border-radius: 6px;
+            border-width: 0.1rem;
+        }
+
+        .css-1okebmr-indicatorSeparator {
+            width: 0px;
+        }
+
+        .css-1uccc91-singleValue {
+            font-size: $font13;
+            color: $silvergray;
+            line-height: 1.1vw;
+        }
+
+        .css-1wa3eu0-placeholder {
+            font-size: $font13;
+            color: $silvergray;
+        }
+
+        .css-6q0nyr-Svg {
+            color: $silvergray;
+        }
+
+        .css-gg45go-NoOptionsMessage {
+            font-size: $font13;
+        }
+
+        .css-yt9ioa-option {
+            font-size: $font13;
+        }
+
+        .css-1n7v3ny-option {
+            font-size: $font13;
+        }
+
+        input {
+            font-size: $font13 !important;
+            color: $silvergray !important;
+        }
+
+        .css-165luzk-option {
+            font-size: $font13;
+        }
+
+        .css-2b097c-container {
+            outline: none;
+            border: none;
+            appearance: none;
+
+            &:focus {
+                outline: none;
+                border: none;
+            }
+        }
+
+    }
+
+    .react-datepicker-wrapper,
+    .DatePicker {
+        width: $fullwidth;
+        z-index: inherit;
+
+        .datepicker_icon,
+        input {
+            width: $fullwidth;
+            border: 0.1rem solid $whitebg;
+            padding: 6px 6px;
+            height: 41px;
+            border-radius: 6px;
+            background-image: url('../../../../../Utility/Public/images/calendarcolor.png');
+            background-repeat: no-repeat;
+            background-position: 95% 9px;
+            cursor: $cursorP;
+            background-size: 18px;
+            color: $silvergray;
+            font-size: $font13;
+            text-align: left;
+
+            &:focus-visible {
+                border: 0.1rem solid $whitebg;
+                box-shadow: none;
+                outline: none;
+            }
+
+            &:focus {
+                border: 0.1rem solid $whitebg;
+                box-shadow: none;
+                outline: none;
+            }
+        }
+    }
+
+    .datepickerinnerbox {
+        text-align: left;
+
+        label {
+            color: $silvergray;
+            font-size: $font13;
+            margin: 0;
+        }
+    }
+
+    .inputinnerbox {
+        width: 100%;
+        display: inline-block;
+        text-align: left;
+
+        .input_field_inner {
+            width: 100%;
+
+            label {
+                width: 100%;
+                color: $silvergray;
+                font-size: $font13;
+                margin: 0;
+            }
+
+            .input__fields_property {
+                width: 100%;
+                border: 1px solid $whitebg;
+                border-radius: 6px;
+                border-width: 0.1rem;
+                height: 120px;
+                resize: none;
+                padding: 10px;
+                font-size: 13px;
+                color: $silvergray;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+
+    }
+
+    .sbmtBtn {
+        margin-top: 30px;
+        text-align: left;
+
+        .modbtn {
+            background: $blue42;
+            border-radius: 30px;
+            border: 1px solid $blue42;
+            padding: 7px 40px;
+            font-size: 15px;
+            color: $whitecolor;
+            font-family: $PoppinsM;
+        }
+    }
+
+    .addmore {
+        color: $lightbg;
+        font-size: 14px;
+        line-height: 24px;
+        margin: 10px 0px;
+        float: left;
+        cursor: pointer;
+    }
+
+}
+
+.countinput {
+    width: 40px;
+    color: $blueset43;
+    background: $whitecolor;
+    border: none;
+    box-shadow: 0px 7px 64px rgba(0, 0, 0, 0.07);
+    border-radius: 8px;
+    font-weight: 500;
+    outline: none;
+    font-size: 14px;
+    text-align: center;
+}
+
+.interimListModal {
+    .modal-dialog {
+        width: 390px;
+    }
+
+    .modal-header {
+        padding: 1rem 1rem 1rem 1rem;
+    }
+
+    .modal-body {
+        padding: 0rem 1rem 1.8rem 1rem;
+    }
+
+    .modal-footer {
+        border-top: 0px solid $lightgrayuncommon;
+
+        .savebtn {
+            background: $lightskybg;
+            border: 1px solid $lightskybg;
+            color: $whitecolor;
+            border-radius: 6px;
+            font-size: 13px;
+            padding: 3px 10px;
+        }
+
+        .cancelbtn {
+            background: transparent;
+            border: 1px solid transparent;
+            color: $lightskybg;
+            border-radius: 6px;
+            font-size: 13px;
+            padding: 3px 10px;
+        }
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1499px) {
+    .horizontal-timeline>.horizontal-timeline-wrapper {
+        height: 43vh !important;
+    }
+
+    .horizontal-timeline .horizontal-timeline-arrow::before {
+        top: -0.6vh !important;
+    }
+
+    .profilemaincontainer {
+        .verticaltabsinner .nav-pills {
+            padding: 2vw 0px 1vw 0px;
+            margin: 1vw 0px 0px 0px;
+        }
+
+        .documentsconinner {
+            min-height: 18vw;
+            max-height: 18vw;
+        }
+    }
+
+}
+
+.zoominzoomoutclass {
+    .modal-dialog {
+        //width: 93.6%;
+        //max-width: 93.6%;
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+
+        .modal-content {
+            height: 100%;
+        }
+    }
+
+    .photo-viewer-container {
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    .modal-body {
+        iframe {
+            height: 95%;
+        }
+    }
+}
+
+.customizeSwitchBtn {
+    .btn-primary {
+        box-shadow: none !important;
+        background: transparent !important;
+        color: transparent !important;
+
+        &:hover {
+            box-shadow: none !important;
+            background: transparent !important;
+            color: transparent !important;
+        }
+
+        &:active {
+            box-shadow: none !important;
+            background: transparent !important;
+            color: transparent !important;
+        }
+
+        &:focus {
+            box-shadow: none !important;
+            background: transparent !important;
+            color: transparent !important;
+        }
+
+        .switch-handle {
+            right: 10px !important;
+            height: 18px !important;
+            border-radius: 50px !important;
+
+        }
+    }
+
+    .switch.btn {
+        min-width: 48px !important;
+        border-radius: 20px;
+    }
+
+    .switch.btn.on {
+        border-color: $grnbg !important;
+        background: $grnbg !important;
+    }
+
+    .switch.btn.off {
+        border-color: $grayback !important;
+        background: $grayback !important;
+    }
+
+    .switch-on.btn,
+    .switch-on.btn:hover {
+        padding-right: 2rem !important;
+        background: $grnbg !important;
+        border-color: $grnbg !important;
+    }
+
+    .switch-off.btn,
+    .switch-off.btn:hover {
+        background: $grayback !important;
+        border-color: $grayback !important;
+        border: none !important;
+        color: transparent !important;
+    }
+
+    .switch-off.btn {
+        padding-left: 2rem;
+        border-color: $grayback !important;
+    }
+
+    .switch.off.btn-light {
+        border-color: $grayback !important;
+    }
+
+    .btn {
+        padding: .1rem .5rem;
+        font-size: 0.35rem;
+        line-height: 1.2rem;
+        background-color: $lightgrayun;
+        border-color: $lightgrayun;
+    }
+
+    .btn-light .switch-handle {
+        left: 10px !important;
+        height: 18px !important;
+        border-radius: 50px !important;
+    }
+}
+
+.archiverEmployee {
+    .custom-file-upload {
+        pointer-events: none;
+    }
+
+    .hoverlayerbackground {
+        pointer-events: none;
+    }
+}
+
+.userdatalabel {
+    font-size: 14px;
+    text-align: left;
+    width: 17vw;
+    float: right;
+    padding: 0.3vw 0 0 0.3vw;
+}
+
+// .trainingsaggridAlertUser .ag-header{ display:none !important;}
+.trainingsaggridAlertUser {
+    height: 30vh;
+
+    .ag-root-wrapper {
+        border: none !important;
+    }
+}
+
+.trainingsaggridtypeGrid {
+    height: 40vh;
+
+    .ag-root-wrapper {
+        border: none !important;
+    }
+
+    .ag-header-cell-text {
+        font-family: $PoppinsSB !important;
+    }
+
+    .resulitLabel {
+        font-size: 0.85vw;
+    }
+
+    .resulitSucceeded {
+        color: $lightgreen;
+    }
+
+    .resulitFailure {
+        color: $lightred;
+    }
+
+    .ag-header-cell:nth-child(1) .ag-header-cell-text {
+        padding-left: 0px;
+    }
+
+    .ag-cell:nth-child(3) {
+        text-align: left !important;
+    }
+
+    .ag-cell:nth-child(1) {
+        padding-left: 10px !important;
+        color: $deepgreybg;
+        font-size: 0.85vw;
+        font-family: $PoppinsR;
+        font-weight: inherit;
+    }
+
+    .ag-cell {
+        line-height: 38px !important;
+    }
+
+}
+
+.traningtabContent {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+
+    h4 {
+        margin: 1.5vw 0vw 1.5vw 0;
+    }
+
+    .expire_user_expiredCount {
+        h4 {
+            text-transform: capitalize;
+        }
+    }
+}
+
+.deleteHistoryInner {
+    i {
+        color: $lightred;
+        font-size: 14px;
+        cursor: pointer;
+    }
+}
+
+.user_name_box_profile {
+    border-radius: 6px;
+    cursor: pointer;
+    border: 1px solid $grayDD;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: $blkbg;
+    font-size: 2.5vw;
+    background: $whiteColor;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    text-transform: uppercase;
+
+    .user_name_label {
+        position: absolute;
+    }
+}
+
+.profilemaincontainer .profilecontainer.mdifyCounterstab {
+    padding: 1vw 5.9vw 0px 2.6vw !important;
+    width: 100%;
+    float: left;
+
+    .progressBoxes {
+        padding: 0vw 0vw 0px 0vw !important;
+    }
+}
+
+.edit_btn_position {
+    text-align: right;
+
+    .rightbtnpanel {
+        background: $whitecolor;
+        border: 1px solid $lightsilver;
+        padding: 0.8vw 3vw 0.8vw 0.7vw;
+        border-radius: 0.7vw;
+        font-size: 1vw;
+        position: $relPosition;
+        background: url(../images/btn2.png) $whitecolor no-repeat;
+        background-size: 1.3vw;
+        background-position: right 12px center;
+        font-family: $PoppinsR;
+    }
+}
+
+.leave_box_table_container {
+    //height: 20vw;
+    height: 19vw;
+    margin-top: 2vw;
+    padding: 0vw 0vw 0px 0vw !important;
+    overflow-y: auto;
+    overflow-x: hidden;
+    direction: ltr;
+    scrollbar-color: $greybg $whitecolor;
+    -moz-scrollbar-color: $greybg $whitecolor;
+    -webkit-scrollbar-color: $greybg $whitecolor;
+    scrollbar-width: thin;
+
+    &::-webkit-scrollbar {
+        height: 7px;
+        width: 7px;
+        background: $greybg;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $greybg
+    }
+}
+
+.profilemaincontainer {
+    .verticaltabsinner {
+        .adddocbtninnerBtn {
+            position: relative;
+            right: -24px;
+            top: 16px;
+        }
+    }
+}
+
+.jbssadn_en_ndassbj {
+    pointer-events: all;
+    width: 100%;
+    display: inline-block;
+}
+
+.jbssadn_di_ndassbj {
+    pointer-events: none;
+    width: 100%;
+    display: inline-block;
+}
+
+.maritalStatusOptionLabel {
+
+    .css-yk16xz-control,
+    .css-1pahdxg-control {
+        .css-1uccc91-singleValue {
+            text-transform: capitalize;
+        }
+    }
+}
+
+.profilemaincontainer {
+    .mediclaimTab {
+        .tableviewdoc {
+            thead {
+                .userNamebox {
+                    text-align: left;
+                    padding-left: 15px;
+                }
+            }
+        }
+
+        .editBtn {
+            top: 3px !important;
+
+            i {
+                font-size: 20px;
+            }
+        }
+
+        .userlabelView {
+            text-align: left;
+        }
+
+        .relation_label {
+            text-transform: capitalize;
+        }
+        .view_documents{
+            color: $lightbg;
+            font-size: 13px;
+            width: auto;
+        }
+        .downloadiconbtn.downloadbtn.editBtn{
+            width: 50px;
+        }
+        .closeiconbtn{
+            width: 50px;
+        }
+    }
+}
+
+.mediclaimModalContent {
+    .modal-body {
+        padding: 0.4rem 0.5rem 1.8rem 0.5rem;
+    }
+    .modal-dialog {
+        // width: 650px;
+        // max-width: 650px;
+        width: 650px;
+        max-width: 650px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        display: inline-grid !important;
+        border-radius: 0.8rem;
+        pointer-events: all;
+        .modal-header{
+            position: sticky;
+            width: 650px;
+            z-index: 999;
+            top: 0;
+            background: $whiteColor;
+            border-top-left-radius: 0.8rem;
+            border-top-right-radius: 0.8rem;
+            padding: 2rem 1.5rem 1rem 1.5rem;
+        }
+    }
+    .radio_btn_content {
+        width: 100%;
+        display: inline-block;
+    }
+
+    .countersradiobox {
+        padding: 10px 0px 10px 0px;
+    }
+
+    .willing_to_add {
+        font-family: $PoppinsR;
+        font-weight: inherit;
+        font-size: $font13;
+        color: $silvergray;
+        padding: 8px 0 0 12px;
+        text-align: left;
+
+        .custom_checkbox_tick {
+            padding-left: 26px;
+        }
+    }
+
+    .radio_label {
+        .taitlecount {
+            font-family: $PoppinsR;
+            font-weight: inherit;
+            font-size: $font13;
+            color: $silvergray;
+        }
+    }
+
+    .DatePicker {
+        z-index: 9999;
+
+        .DatePicker__calendarContainer {
+            top: -200px !important;
+            z-index: 9999;
+        }
+    }
+    .documentDetailsBtn{
+        background: transparent;
+        border: none;
+        color: $lightskybg;
+        font-size: 13px;
+        margin: 33px 0 0 0;
+    }
+    .topBorderPart{
+        border-top: 0.1rem solid $whitebg;
+        width: 100%;
+        margin: 8px auto 6px;
+    }
+    .totalBoxPart{
+        width: 100%;
+        display: inline-block;
+        border-bottom: 0.1rem solid $whitebg;
+        margin: 0 auto 8px;
+        padding: 0 0 8px 0;
+        // .removepl{
+        //     padding-left: 15px;
+        //     padding-right: 0px;
+        // }
+    }
+    .link_document_btn{
+        font-size: 13px;
+        color: $lightskybg;
+        padding: 0;
+        background: transparent;
+        border: none;
+        margin: 10px 0 0 0;
+    }
+    .document_type_main_label{
+        padding-left: 0px;
+        label{
+            font-family: $PoppinsR;
+            font-weight: inherit;
+            font-size: 13px;
+            color: $silvergray;
+            margin: 0;
+        }
+    }
+    .linkDocumentViewBtn{
+        background: transparent;
+        border: none;
+        padding: 0;
+        img{
+            width: 17px;
+            margin: 0 0 0 10px;
+        }
+    }
+    .certificate_no_input{
+        .input__fields_property{
+            text-transform: uppercase;
+        }
+    }
+    .certificate_no_input ::-webkit-input-placeholder { /* Edge */
+        text-transform: capitalize;
+    }
+      
+    .certificate_no_input :-ms-input-placeholder { /* Internet Explorer 10-11 */
+        text-transform: capitalize;
+    }
+      
+    .certificate_no_input ::placeholder {
+        text-transform: capitalize;
+    }
+    .borderPart .trash_icon_btn {
+        right: 0;
+        top: 5px;
+        z-index: 0;
+    }
+}
+
+.blank_space {
+    width: 36px;
+    display: inline-block;
+}
+
+.dropdowninnerboxRelation {
+    .css-1uccc91-singleValue {
+        text-transform: capitalize;
+    }
+}
+
+.removepr.borderPart {
+    padding-right: 35px !important;
+    margin-top: 10px;
+    padding-top: 5px;
+    // max-height: 250px;
+    // overflow-y: auto;
+    // overflow-x: hidden;
+    // direction: ltr;
+    // scrollbar-color: $blkbglight $whitecolor;
+    // -moz-scrollbar-color: $blkbglight $whitecolor;
+    // -webkit-scrollbar-color: $blkbglight $whitecolor;
+    // scrollbar-width: thin;
+    .bottomSpace{
+        margin-bottom: 10px;
+    }
+}
+.addNewLink {
+    font-family: $PoppinsR;
+    font-weight: inherit;
+    font-size: 13px;
+    color: $lightskybg;
+    padding: 32px 0px 0px 12px;
+    cursor: pointer;
+    margin: 0;
+}
+.addbtnborderPart {
+    font-family: $PoppinsR;
+    font-weight: inherit;
+    font-size: 12px;
+    color: $lightskybg;
+    float: right;
+    padding-top: 10px;
+    cursor: pointer;
+}
+.modalcustomize .borderPart .trash_icon_btn {
+    right: 0;
+    top: 5px;
+}
+.linkDocmentDetailsBox{
+    .tableviewdoc {
+        margin: 0px;
+
+        thead {
+            position: sticky;
+            z-index: 99;
+            top: 0;
+
+            th {
+                border-top: 0px solid $lightgrayuncommon;
+                border-bottom: 0px solid $lightgrayuncommon;
+                background-color: $bluebg;
+                padding: 0.226vw 0.5vw;
+                font-size: 0.85vw;
+                color: $whitecolor;
+                font-family: $PoppinsM;
+                font-weight: inherit;
+                text-align: left;
+                letter-spacing: -0.653846px;
+            }
+
+            .radisbox {
+                border-top-left-radius: 11px;
+                border-bottom-left-radius: 11px;
+                width: 180px;
+            }
+
+            .radisboxR {
+                border-top-right-radius: 11px;
+                border-bottom-right-radius: 11px;
+            }
+        }
+
+        td {
+            border-top: 0px solid $lightgrayuncommon;
+            font-family: $PoppinsR;
+            color: $slidegreybg;
+            font-size: 0.85vw;
+            padding: 0.29vw 10px;
+            text-align: left;
+            line-height: 1.3vw;
+            vertical-align: middle;
+
+            &:nth-child(1) {
+                color: $graydark;
+                font-family: $PoppinsM;
+                text-align: $alignLT;
+            }
+
+            &:last-child {
+                text-align: $alignLT;
+            }
+        }
+
+        tbody tr:nth-of-type(2n+1) {
+            background-color: $slidewhitebg;
+        }
+
+        tbody {
+            position: $relPosition;
+            top: 0.5vw;
+        }
+    }
+    .downloadiconbtn {
+        background: transparent;
+        border: none;
+        color: $silvergray;
+        font-size: 16px;
+        font-weight: 300;
+        padding: 0 0px;
+        margin: 0 1.3vw;
+        position: relative;
+        top: -1px;
+    }
+    .othersdocbtn img {
+        width: 1.2vw;
+        height: 1.35vw;
+    }
+}
+.linkDetailsModalContent{
+    .modal-dialog {
+        width: 350px;
+        max-width: 350px;
+      }
+      .modal-body {
+        padding: 0.0rem 1.3rem 1rem 1.3rem;
+      }
+      .modal-header {
+        padding: 1rem 1.3rem 0.2rem 1.3rem;
+        border-bottom: 0px solid $lightgrayuncommon;
+      }
+    .linkDetailsRadio{
+        width: 30px;
+        .custom-radio-container{
+            height: 13px;
+            padding: 0;
+            .checkmark {
+                border: 0.11rem solid $grayC5;
+                &::after {
+                    top: 0.13rem;
+                    left: 0.13rem;
+                  }
+              }
+        }
+    }
+    .add_new_document_inner{
+        padding: 0 0 5px 0;
+        width: 100%;
+        display: inline-block;
+    }
+    .add_new_document_btn{
+        color: white;
+        font-size: 13px;
+        float: right;
+        background: $lightskybg;
+        border: 1px solid $lightskybg;
+        border-radius: 6px;
+        padding: 0 5px;
+    }
+    .linkDetailsimg{
+        text-align: right !important;
+        .downloadiconbtn {
+            margin: 0px !important;
+        }
+    }
+    .linkDocmentDetailsBox{
+        height: 450px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        direction: ltr;
+        scrollbar-color: $blkbglight $whitecolor;
+        -moz-scrollbar-color: $blkbglight $whitecolor;
+        -webkit-scrollbar-color: $blkbglight $whitecolor;
+        scrollbar-width: thin;
+    }
+    .leftSideTh{
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+    .rightSideTh{
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+}
+.viewDetailsModalContent{
+    .modal-dialog {
+        width: 500px;
+        max-width: 500px;
+    }
+    .tableviewdoc thead .radisbox {
+        text-align: left;
+    }
+    .modal-header {
+        padding: 1rem 1.3rem 1rem 1.3rem;
+    }
+    .linkDocmentDetailsBox{
+        .tableviewdoc {
+            tbody {
+                top: 0.5vw;
+            }
+            th {
+                text-align: left;
+            }
+            td {
+                text-align: left;
+            }
+        }
+    }
+}
+.profilemaincontainer .verticaltabsinner.mediclaimTab  .tableviewdoc td:last-child {
+    text-align: right;
+  }
+.typeofcontract_list{
+    .css-yk16xz-control{
+        .css-g1d714-ValueContainer{
+            text-transform: capitalize;
+        }
+    }
+    .css-1pahdxg-control{
+        .css-1uccc91-singleValue{
+            text-transform: capitalize;
+        }
+    }
+}
+.general_profilepersonalcon{
+    height: 24vw;
+}
+.error_phone_number{
+    z-index: 9;
+}

@@ -1,0 +1,17 @@
+
+/*login and forgotpass page*/
+@import "var";
+@mixin appcont { width: $fullwidth; float:$fl; height: 100vh;background: $blkColor; }
+@mixin appcontInn { vertical-align: middle; display: table-cell; width: 100vw; height: 100vh; }
+@mixin logprop {
+    position: $relPosition; 
+    background: $logbgcolor;
+    //width: 94%;
+    width: 100%;
+    margin: 0px auto;
+    border-radius: $bradius15; 
+}
+
+
+
+

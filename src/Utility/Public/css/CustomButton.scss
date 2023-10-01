@@ -1,0 +1,22 @@
+@import "var";
+@import "mixin";
+.customButtonClass {
+    background: $whiteColor;
+    border: 1px solid $bluecolor;
+    color: $bluecolor;
+    font-size: 0.9vw;
+    border-radius: 0.2vw;
+    padding: 0.37vw 0.9vw;
+    margin: 0px 0px 0px 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+.customRedButtonClass{
+    background: $whiteColor;
+    border: 1px solid $red1;
+    color: $red1;
+    font-size: 0.9vw;
+    border-radius: 0.2vw;
+    padding: 0.4vw 0.9vw;
+    margin: 0px 0px 0px 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}

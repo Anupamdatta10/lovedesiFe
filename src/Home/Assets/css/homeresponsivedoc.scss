@@ -1,0 +1,240 @@
+@import "var";
+@import "homemixin";
+
+@media (min-width: 3000px) and (max-width: 5999px) {
+    .dropdownbox .css-tlfecz-indicatorContainer .css-6q0nyr-Svg, .dropdownbox .css-tlfecz-indicatorContainer .css-19bqh2r, .dropdownbox .css-1gtu0rj-indicatorContainer .css-19bqh2r{
+        width: 45px;
+        height: 45px;
+    }
+    .dropdownbox .css-1gtu0rj-indicatorContainer .css-6q0nyr-Svg, .dropdownbox .css-tlfecz-indicatorContainer .css-19bqh2r {
+        width: 45px;
+        height: 45px;
+    }
+    .css-9gakcf-option{
+        &::after{
+            top: 35px !important;
+            left: 20px !important;
+            width: 15px !important;
+            height: 30px !important;
+        }
+    }
+    .dropdownbox .css-26l3qy-menu .dropdowninnersection .dropheaderbtn {
+        font-size: 35px;
+        line-height: 60px;
+    }
+    .dropdownbox .css-26l3qy-menu .dropdowninnersection .dropheaderbtn img {
+        height: 35px;
+    }
+    .dropdownbox .css-26l3qy-menu .dropdowninnersection .dropheaderlabel {
+        padding: 0 0 0 70px !important;
+    }
+    .pageinnersearch .search_btn_addon i {
+        font-size: 40px;
+    }
+}
+@media (min-width: 2200px) and (max-width: 3999px) {
+    .css-9gakcf-option{
+        &::after{
+            top: 18px !important;
+            left: 14px !important;
+            width: 8px !important;
+            height: 15px !important;
+        }
+    }
+    .pageinnersearch .search_btn_addon i {
+        font-size: 25px;
+    }
+    .aggridview {
+        height: 80vh;
+    }
+    .aggridview .ag-body-viewport {
+        max-height: 78vh;
+    }
+    
+}
+@media (min-width: 2000px) and (max-width: 2199px) {
+    
+}
+@media (min-width: 1600px) and (max-width: 1999px) {
+    
+    .css-9gakcf-option{
+        &::after{
+            top: 14px !important;
+            left: 10px !important;
+            width: 7px !important;
+            height: 12px !important;
+        }
+    }
+    .pageinnersearch .search_btn_addon i {
+        font-size: 16px;
+    }
+}
+@media (min-width: 1400px) and (max-width: 1599px) {
+    .dropdownbox{ input{top: -5px;}}
+}
+/*@media(max-width: 1366px){
+    .individualMonthViewClass {
+        .dhx_cal_data.dhx_resize_denied.dhx_move_denied{
+            table{
+                border-bottom: 1px solid #e0e0e0;
+            }
+        }
+    }
+}*/
+@media (min-width: 1280px) and (max-width: 1399px) {
+    
+    .left_bar_customize.left-bar .side-nav .nav-item.lastitemview {
+        padding: 5.5vw 0vw 0vw 0.2vw !important;
+    }
+    .css-9gakcf-option{
+        &::after{
+            top: 20px !important;
+            left: 10px !important;
+            width: 7px !important;
+            height: 12px !important;
+        }
+    }
+    .dropdownbox{ input{top: -5px;}}
+}
+@media (min-width: 1200px) and (max-width: 1399px) {
+    .dropdownbox {
+        width: 9vw;
+    }
+    .departmentdrop {
+        width: 10vw;
+    }
+    .statutdrop {
+        width: 7.5vw;
+    }
+    .dropdownbox .css-26l3qy-menu .dropdowninnersection .dropheaderbtn {
+        line-height: 15px;
+    }
+    .dropdownbox .css-26l3qy-menu .dropdowninnersection .dropheaderbtn img {
+        height: 12px;
+    }
+    .css-9gakcf-option{
+        &::after{
+            top: 9px !important;
+            left: 8px !important;
+            width: 6px !important;
+            height: 10px !important;
+        }
+    }
+    .dropdownbox .css-tlfecz-indicatorContainer {
+        top: -1px;
+    }
+    .dropdownbox .css-tlfecz-indicatorContainer .css-6q0nyr-Svg, .dropdownbox .css-tlfecz-indicatorContainer .css-19bqh2r, .dropdownbox .css-1gtu0rj-indicatorContainer .css-19bqh2r {
+        width: 15px;
+    }
+    .dropdownbox .css-1gtu0rj-indicatorContainer .css-6q0nyr-Svg, .dropdownbox .css-tlfecz-indicatorContainer .css-19bqh2r {
+        width: 15px;
+    }
+    .dropdownbox .css-1wa3eu0-placeholder {
+        top: 50% !important;
+    }
+    .dropdownbox .css-1uccc91-singleValue {
+        top: 52% !important;
+    }
+    @media screen and (-webkit-min-device-pixel-ratio: 0) {
+        _::-webkit-full-page-media,
+        _:future,
+        :root,
+        .dropdownbox .css-1uccc91-singleValue {
+            top: 40% !important;
+        }
+        .dropdownbox .css-tlfecz-indicatorContainer {
+            top: -3px;
+        }
+        .dropdownbox .css-1wa3eu0-placeholder {
+            top: 40% !important;
+        }
+    }
+    
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .custom_checkbox_container .checkmarkCheckbox {
+        height: 13px;
+        width: 13px;
+    }
+    .inactivebox .custom_checkbox_container {
+        line-height: 2.1vw;
+        padding-right: 1.6vw;
+    }
+    .dropdownbox .css-tlfecz-indicatorContainer .css-6q0nyr-Svg, .dropdownbox .css-tlfecz-indicatorContainer .css-19bqh2r, .dropdownbox .css-1gtu0rj-indicatorContainer .css-19bqh2r {
+        width: 13px;
+    }
+    .dropdownbox .css-1gtu0rj-indicatorContainer .css-6q0nyr-Svg, .dropdownbox .css-tlfecz-indicatorContainer .css-19bqh2r {
+        width: 13px;
+    }
+    .dropdownbox {
+        width: 10vw;
+    }
+    .departmentdrop {
+        width: 11vw;
+    }
+    .statutdrop {
+        width: 8vw;
+    }
+    .dropdownbox .css-26l3qy-menu .dropdowninnersection .dropheaderbtn {
+        line-height: 15px;
+    }
+    .dropdownbox .css-26l3qy-menu .dropdowninnersection .dropheaderbtn img {
+        height: 10px;
+    }
+    .dropdownbox .css-26l3qy-menu .dropdowninnersection .dropheaderlabel {
+        padding: 0 0 0 15px !important;
+    }
+    .dropdownbox .css-1wa3eu0-placeholder {
+        top: 50% !important;
+    }
+    .dropdownbox .css-1uccc91-singleValue {
+        top: 50% !important;
+    }
+    .dropdownbox .css-tlfecz-indicatorContainer {
+        top: -1px;
+    }
+    .custom_checkbox_container .checkmarkCheckbox::after {
+        width: 9px;
+        height: 9px;
+    }
+    .pageinnersearch {
+        top: -0.1vw;
+    }
+    .pageinnersearch .search_btn_addon i {
+        font-size: 12px;
+    }
+    .css-9gakcf-option{
+        &::after{
+            top: 9px !important;
+            left: 8px !important;
+            width: 5px !important;
+            height: 8px !important;
+        }
+    }
+    
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    
+}
+@media all and (display-mode: fullscreen){
+	.ag-theme-alpine.aggridview {
+        height: 44vw !important;
+       .ag-body-viewport {
+            max-height: 41vw;
+        }
+    }
+    .left_bar_customize.left-bar .bottomlogo {
+        padding: 8.5vw 0vw 0vw 0.4vw !important;
+    }
+    .agViewBox .ag-theme-alpine.aggridview {
+        height: 28vw !important;
+    }
+    .applyLeaveTab .agViewBox .ag-body-viewport {
+        max-height: 44vh !important;
+    }
+    .agViewBox .countersUnderAggrid.ag-theme-alpine {
+        height: 21vw !important;
+    }
+}
+
+

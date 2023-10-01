@@ -1,0 +1,35 @@
+.this_app_con {
+    border: 1px solid #d4e2ff;
+    padding: 15px 6px;
+    margin-right: 12px;
+    margin-bottom: 12px;
+    /* display: flex; */
+    height: fit-content;
+    cursor: pointer;
+    /* flex-wrap: wrap; */
+    width: 108px;
+    height: 102px;
+    justify-content: center;
+}
+
+.all_app_html_con {
+    max-height: 225px;
+    overflow-y: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.m-b-25 {
+    margin-bottom: 25px !important;
+    ;
+}
+
+.abc {
+    margin: 46px;
+    margin-left: -318px;
+}
+
+.activeClass {
+    border: 2px solid red !important;
+
+}
