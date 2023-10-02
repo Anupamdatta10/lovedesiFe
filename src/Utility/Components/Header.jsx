@@ -11,7 +11,6 @@ import Popover from 'react-bootstrap/Popover';
 import CustomInput from '../Components/CustomInput';
 import Config from '../Config'
 import * as UtilityController from '../Controller/UtilityController';
-import { useTranslation, withTranslation, Trans } from 'react-i18next';
 import { withRouter } from 'react-router';
 
 import LoadingOverlay from 'react-loading-overlay';
@@ -536,7 +535,7 @@ class Header extends Component {
 		let user_first_name = userCredentials && userCredentials.user_details && userCredentials.user_details.first_name
 		let user_last_name = userCredentials && userCredentials.user_details && userCredentials.user_details.last_name
 
-		let roleName = this.props.userCredentials?.user_details?.role_name
+		//let roleName = this.props.userCredentials?.user_details?.role_name
 
 		let selectedVersion = { "value": this.props.userCredentials?.user_details?.version_id, "label": this.props.userCredentials?.user_details?.version.charAt(0).toUpperCase() + this.props.userCredentials?.user_details?.version.slice(1) };
 
@@ -545,20 +544,13 @@ class Header extends Component {
 		//console.log("notificationData========", this.state.notificationData.length)
 		return (
 			<div className="header-top-inner">
-				<header className={roleName != "app_admin" && this.state.notificationData.length > 0 ? "header_main header_main_index" : "header_main"} >
+				<header className="header_main" >
 					{/* this.state.notificationData.length */}
 					{/*<div className={this.props.leftbar ? "brand-w-button header_left left_border_open" : "brand-w-button header_left left_border_close"}>
 						<svg width="15" height="15" viewBox="0 0 14 14" fill="none" onClick={this.handleBar} style={{ cursor: 'pointer' }}>
 							<path d="M0.5 3.125H13.5C13.75 3.125 14 2.90625 14 2.625V1.375C14 1.125 13.75 0.875 13.5 0.875H0.5C0.21875 0.875 0 1.125 0 1.375V2.625C0 2.90625 0.21875 3.125 0.5 3.125ZM0.5 8.125H13.5C13.75 8.125 14 7.90625 14 7.625V6.375C14 6.125 13.75 5.875 13.5 5.875H0.5C0.21875 5.875 0 6.125 0 6.375V7.625C0 7.90625 0.21875 8.125 0.5 8.125ZM0.5 13.125H13.5C13.75 13.125 14 12.9062 14 12.625V11.375C14 11.125 13.75 10.875 13.5 10.875H0.5C0.21875 10.875 0 11.125 0 11.375V12.625C0 12.9062 0.21875 13.125 0.5 13.125Z" fill="white" fillOpacity="0.54" />
 						</svg>
 					</div>*/}
-					{roleName != "app_admin" ?
-						<div className='alert_box_inner'>
-							<AlertNotification
-								show={this.state.show}
-								notificationData={this.state.notificationData}
-								handleCrossButtonClick={this.handleCrossButtonClick}
-							/></div> : null}
 
 					<div className="header_right user_icon_innner" >
 						<ul className="nav_ul">
@@ -591,25 +583,6 @@ class Header extends Component {
 									/>
 								</div>
 							</li>
-
-							{roleName == "app_admin" ?
-								<li style={{ display: 'none' }}>
-									<div className="dropdownbox versiondrop">
-										<AutosuggestComponent
-											handleOnChange={(e) => { this.handleVersionChange(e) }}
-											options={this.props.version}
-											selectedValue={selectedVersion}
-											name=''
-											isMulti={false}
-											placeholder="Choose version"
-											isDisabled={false}
-											//isClearable={true}
-											closeButton={true}
-											menuHeader="Choose version"
-											isSearchable={true}
-										/>
-									</div>
-								</li> : null}
 
 
 							{user_profile_image != "" ?
@@ -709,4 +682,4 @@ const mapStateToProps = (globalState) => {
 		version: globalState.LoginReducer.version
 	};
 }
-export default withRouter(connect(mapStateToProps, { handleLeft, loaderStateTrue, loaderStateFalse, setToken, setUserCredentials, logOutApp })(withTranslation()(Header)));
+export default withRouter(connect(mapStateToProps, { handleLeft, loaderStateTrue, loaderStateFalse, setToken, setUserCredentials, logOutApp })(Header));

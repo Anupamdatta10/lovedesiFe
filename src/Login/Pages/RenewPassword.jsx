@@ -223,7 +223,7 @@ const RenewPassword = (props) => {
             valid = false;
             setState(prev => ({
                 ...prev,
-                usernameError: 'Please enter valid email or phone number'
+                usernameError: 'Please enter valid email'
             }))
         }
         return valid;

@@ -96,21 +96,21 @@
 .pagination_customize .page_start_end {
 	font-size: 0.8rem;
 	color: rgba(0, 0, 0, 0.65);
-	font-family: Poppins-Regular;
+	font-family: Roboto-Regular;
 }
 .pagination_customize .page_label_text {
 	font-size: 0.8rem;
 	color: rgba(0, 0, 0, 0.65);
-	font-family: Poppins-Regular;
+	font-family: Roboto-Regular;
 }
 .pagination_customize .no_of_pages {
 	font-size: 0.8rem;
 	color: rgba(0, 0, 0, 0.65);
-	font-family: Poppins-Regular;
+	font-family: Roboto-Regular;
 }
 .pagination_customize .page_size_text_label {
 	padding-left: 12px;
 	font-size: 0.8rem;
 	color: rgba(0, 0, 0, 0.65);
-	font-family: Poppins-Regular;
+	font-family: Roboto-Regular;
   }

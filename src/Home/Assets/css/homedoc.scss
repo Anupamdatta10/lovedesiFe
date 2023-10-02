@@ -23,7 +23,7 @@ button {
 
 .connectheader {
 	position: $relPosition;
-	top: -2.5vw;
+	//top: -2.5vw;
 }
 
 .tabsmainbox {
@@ -37,9 +37,6 @@ button {
 	position: relative;
 	background: $whitecolor;
 	margin-top: 15px;
-	margin-bottom: 10px;
-	border-radius: 10px;
-	box-shadow: 0 2px 4px rgba(56,65,74,.15);
 	.dropdownbox {
 		margin-right: 0.4vw;
 		//margin-top: -5px;
@@ -732,9 +729,6 @@ button {
 	.ag-root-wrapper {
 		border-color: $grayDD !important;
 		border-width: 1px !important;
-		//border-radius: 10px;
-		border-radius: 10px;
-		box-shadow: 0 2px 4px rgba(56, 65, 74, 0.15);
 	}
 
 	.ag-header {
@@ -1003,10 +997,8 @@ button {
 	background-color: rgba(0, 0, 0, 0.2);
 
 	.modal-dialog {
-		// width: 600px;
-		// max-width: 600px;
-		width: 1200px;
-		max-width: 1200px;
+		width: 600px;
+		max-width: 600px;
 		//position: $relPosition;
 		display: flex !important;
 		pointer-events: none;
@@ -1023,11 +1015,10 @@ button {
 	.modal-header {
 		padding: 2rem 1.8rem 1rem 1.8rem;
 		border-bottom: 0px solid $lightgrayuncommon;
-		box-shadow: 0 5px 10px rgba(0,0,0,0.1);
 	}
 
 	.modal-content {
-		border-radius: 0.8rem;
+		border-radius: 0.4rem;
 		border: 0px solid rgba(0, 0, 0, .2);
 	}
 
@@ -1766,10 +1757,6 @@ button {
 }
 
 .mondimension {
-	// .innerbodydimension {
-	// 	min-height: 300px;
-	// }
-
 	.dropdowninnerbox {
 		//padding: 0px 0px 15px 0px;
 		padding: 3px 0px 3px 0px;
@@ -2619,7 +2606,7 @@ button {
 		}
 
 		.usernamelabel {
-			font-family: $PoppinsSB !important;
+			font-family: $PoppinsM !important;
 			font-size: 1vw;
 			padding: 0.2vw 0 0.2vw 0;
 		}
@@ -2691,7 +2678,7 @@ button {
 			}
 
 			.usernamelabel {
-				font-family: $PoppinsSB !important;
+				font-family: $PoppinsM !important;
 				font-size: 1vw;
 				padding: 0.2vw 0 0.2vw 0;
 			}
@@ -3385,7 +3372,7 @@ button {
 	}
 }
 .innerbodydimension{
-	min-height: 450px;
+	min-height: 250px;
 }
 .orgModal {
 	.modal-body {

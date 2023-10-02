@@ -108,7 +108,7 @@ const LoginPage = (props) => {
 			if (event.target.value == "") {
 				setState(prev => ({
 					...prev,
-					emailError: 'Please enter valid email or phone number'
+					emailError: 'Please enter valid email'
 				}))
 				setemail(event.target.value)
 			} else {
@@ -166,7 +166,7 @@ const LoginPage = (props) => {
 			valid = false;
 			setState(prev => ({
 				...prev,
-				emailError: 'Please enter valid email or phone number'
+				emailError: 'Please enter valid email'
 			}))
 		} else {
 			var expr = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
@@ -190,7 +190,7 @@ const LoginPage = (props) => {
 			valid = false;
 			setState(prev => ({
 				...prev,
-				passwordError: 'Password error'
+				passwordError: 'Enter Password'
 			}))
 		} else {
 			setState(prev => ({
@@ -213,25 +213,19 @@ const LoginPage = (props) => {
 			login();
 	}
 	const login = (e) => {
-		// console.log("event==========", e);
-
-		//alert();
-
 		let valid = validation();
-		//const { email, password, phonenumber } = state;
 
 		if (valid) {
-			loaderStateTrue();
+			props.history.push(`/${localStorage.getItem('i18nextLng')}/home`);
+			console.log("entry=======home")
+			/*loaderStateTrue();
 			let data = {}
 			data["username"] = email
-			//data["phone_number"] = phonenumber
 			data["password"] = password
 			LoginController.loginGetApi(data).then((response) => {
 				loaderStateFalse();
-				//return false;
 				if (response) {
 					if (response.success) {
-						//new password set
 						if (response.data.challengeName == "NEW_PASSWORD_REQUIRED") {
 							setState(prev => ({
 								...prev,
@@ -263,7 +257,7 @@ const LoginPage = (props) => {
 			}).catch((error) => {
 				loaderStateFalse();
 
-			});
+			});*/
 		}
 
 	}

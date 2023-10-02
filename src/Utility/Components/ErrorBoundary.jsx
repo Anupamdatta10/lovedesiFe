@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
+//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+//import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 
 
 class ErrorBoundary extends Component {
@@ -40,7 +40,9 @@ class ErrorBoundary extends Component {
         <div className='errorDiv'>
           <h1>{this.props.title}</h1>
           <div className='errorIconBox'>
-            <div className='errorIcon'><FontAwesomeIcon icon={faExclamationTriangle} size="3x" /></div>
+            <div className='errorIcon'>
+              {/*<FontAwesomeIcon icon={faExclamationTriangle} size="3x" />*/}
+              </div>
           <p>{this.state.errorInfo.toUpperCase()}</p>
           </div>
           

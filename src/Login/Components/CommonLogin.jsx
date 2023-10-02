@@ -24,9 +24,9 @@ class CommonLogin extends Component {
                     <div className={loginBoxInner}>
                         <div className={logoBoxInner}>
                             <div className="titleposition">
-                                {/* <h2 className="titleone">Waliner</h2> */}
-                                <img src={require('../../Utility/Public/images/logoNew.png')} className="logoInner" />
-                                <h3 className="titletwo">Dashboard</h3>
+                                {/* <h2 className="titleone">LoveDesi</h2> */}
+                               <img src={require('../../Utility/Public/images/logoNew.jpg')} className="logoInner" />
+                                {/* <h3 className="titletwo">Dashboard</h3> */}
                             </div>
                         </div>
                         <form className={loginFormDiv}>

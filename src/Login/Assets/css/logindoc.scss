@@ -25,16 +25,17 @@ body {
 	@include logprop;
 
 	.login_box_inner {
-		width: $logboxwidth;
+		width: 350px;
 		height: $logboxheight;
 		margin: 0px auto;
 		display: table;
-		padding: 55px 40px 45px 40px;
-		border-radius: $bradius35;
+		padding: 30px 20px 30px 20px;
+		border-radius: 10px;
 		position: $relPosition;
 		z-index: 99;
 		box-shadow: $logpageshadow;
 		background: $white_background;
+		border: 0.1rem solid #3c5bb4;
 	}
 
 	.logo-box-inner {
@@ -82,7 +83,7 @@ body {
 	.titleone {
 		color: $bluecolor;
 		font-size: $font36;
-		font-family: $PoppinsSB !important;
+		font-family: $PoppinsM !important;
 		margin: 0;
 		letter-spacing: 0.5px;
 	}
@@ -113,7 +114,7 @@ body {
 			height: 50px;
 			border: 2px solid $lightgrayuncommon;
 			padding: 0px;
-			border-radius: $bradius17;
+			border-radius: 6px;
 			font-size: $font13;
 			color: $deepblue;
 			text-align: $alignCT;
@@ -139,7 +140,7 @@ body {
 		background: linear-gradient(180deg, $lightblue 0%, $bluecolor 100%);
 		box-shadow: 0px 24px 48px -18px rgba(21, 70, 160, 0.5);
 		border-color: $lightblue;
-		border-radius: 30px;
+		border-radius: 6px;
 		width: 100%;
 		padding: 7px 6px 11px 6px;
 		font-size: 18px;
@@ -159,7 +160,7 @@ body {
 
 	.logbtndiv {
 		text-align: center;
-		padding: 19px 21px 0px 21px;
+		//padding: 19px 21px 0px 21px;
 	}
 
 	.forgot_password_property {
@@ -283,7 +284,7 @@ body {
 
 .ForgotPage {
 	.forgotpass {
-		padding: 55px 40px 50px 40px;
+		padding: 40px 30px 30px 30px;
 	}
 
 	.logo-box-inner {
@@ -302,7 +303,7 @@ body {
 		letter-spacing: 0;
 		color: $bluecolor;
 		font-size: 36px;
-		font-family: $PoppinsSB !important;
+		font-family: $PoppinsM !important;
 		margin: 0;
 		letter-spacing: 0.5px;
 	}
@@ -329,7 +330,7 @@ body {
 	}
 
 	.forgor_btn_inner_div {
-		padding: 1vw 1.5vw 0vw 1.5vw;
+		padding: 1vw 0vw 0vw 0vw;
 	}
 }
 
@@ -460,6 +461,6 @@ body {
 	}
 }
 .logoInner{
-	height: 55px;
+	height: 65px;
 	margin: 0px 0px 0px 0px;
 }

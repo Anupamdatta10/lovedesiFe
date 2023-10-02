@@ -57,7 +57,7 @@ class Left extends Component {
 		const { t, roleWisePermission, userCredentials } = this.props;
 		const { activeClass, accName } = this.props.activeLink;
 
-		let orgnizationarry = ["worker", "addWorker"];
+		let orgnizationarry = ["user", "addWorker"];
 
 		let orgArry = [];
 		let orgPermission = orgnizationarry.filter((item) => {
@@ -69,17 +69,14 @@ class Left extends Component {
 
 		let arry = []
 
-		{
-			userCredentials.hasOwnProperty('user_details') && userCredentials.user_details && userCredentials.user_details.hasOwnProperty('role_name') && userCredentials.user_details.role_name == 'app_admin' || userCredentials.user_details.role_name == 'admin' || userCredentials.user_details.role_name == 'user' ?
-				arry.push(
-					<Nav.Item className={activeClass === 'home_module' ? "ActiveClass" : "default"} id="home_module_id" onClick={this.toggle.bind(this, 'home_module', '')} key={0}>
-						<Link to={`/${localStorage.getItem('i18nextLng')}/home`} className="nav-link">
-							<div className="imgcircle" data-tip="Home"><img src={require('../Public/images/home.png')} className="sidebaricon" /></div>
-						</Link>
-					</Nav.Item>
-				)
-				: null
-		}
+
+		arry.push(
+			<Nav.Item className={activeClass === 'home_module' ? "ActiveClass" : "default"} id="home_module_id" onClick={this.toggle.bind(this, 'home_module', '')} key={0}>
+				<Link to={`/${localStorage.getItem('i18nextLng')}/home`} className="nav-link">
+					<div className="imgcircle" data-tip="Home"><img src={require('../Public/images/home.png')} className="sidebaricon" /></div>
+				</Link>
+			</Nav.Item>
+		)
 
 		return arry;
 	}

@@ -48,10 +48,14 @@ const App = (props) => {
       <Popup />
       <ToastContainer />
       <Router>
-        {
+        {/* {
           userCredentials?.user_details?.version == 'v3' ?
-            <Routes />: <LoginRoute />
-        }
+            <Routes />
+            : <LoginRoute />
+        } */}
+        <Routes />
+        
+
       </Router>
     </LoadingOverlay>
   );

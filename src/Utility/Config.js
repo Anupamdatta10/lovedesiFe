@@ -1,12 +1,10 @@
 const Config = ({
   //dev
-  baseURL: 'https://dev-api.waliner.io/',
+  baseURL: '/',
   //NGROK
 
-  // baseURL: 'https://60fd-122-160-113-252.ngrok-free.app/',
 
-  socketURL: 'https://dev-api.waliner.io/',
-  // socketURL: 'https://fae3-223-223-154-95.ngrok-free.app',
+  socketURL: '/',
   extendedUrl: 'api/',
   extendedUrlAuth: 'api/auth/',
   environment: 'development',
@@ -77,7 +75,7 @@ const Config = ({
   //configId: "984946812833909", //business id manage
   configId: "797797202085067", // test appbusiness id manage
   googleAppID: "659226726328-66qinf1vaktt60rbtbnkecag5ijodd8b.apps.googleusercontent.com",
-  googleRedirectUrl: "https://dev.waliner.io/"
+  googleRedirectUrl: "/"
 });
 
 export default Config;

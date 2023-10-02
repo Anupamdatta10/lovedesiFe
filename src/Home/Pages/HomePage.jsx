@@ -2,14 +2,16 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { loaderStateTrue, loaderStateFalse, handleActiveLink, connectToWebsocket, disconnectToWebsocket } from '../../Actions/AllAction';
 import { setToken, setUserCredentials, logOutApp, setVersionList } from '../../Login/Actions/LoginAction';
-import 'ag-grid-community/dist/styles/ag-grid.css';
-import 'ag-grid-community/dist/styles/ag-theme-alpine.css';
+import 'ag-grid-community/styles/ag-grid.css';
+import 'ag-grid-community/styles/ag-theme-alpine.css';
 import '../../Home/Assets/css/homedoc.scss';
 import '../../Home/Assets/css/homeresponsivedoc.scss';
 import { Tabs, Tab } from 'react-bootstrap';
 import { withRouter } from 'react-router';
 import { useTranslation, withTranslation, Trans } from 'react-i18next';
-import Worker from '../Components/Worker/Worker';
+import User from '../Components/User/User';
+import Store from '../Components/Store/Store';
+import Catagory from '../Components/Catagory/Catagory';
 import ModalGlobal from '../../Utility/Components/ModalGlobal';
 import ConfirmationAlert from '../../Utility/Components/ConfirmationAlert';
 import * as LoginController from '../../Login/Controller/LoginController';
@@ -23,8 +25,7 @@ class HomePage extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			selectedTabName: localStorage.getItem("selectedTabName") && localStorage.getItem("selectedTabName") != "" ? localStorage.getItem("selectedTabName") : "worker",
-			//selectedTabName: "worker",
+			selectedTabName: localStorage.getItem("selectedTabName") && localStorage.getItem("selectedTabName") != "" ? localStorage.getItem("selectedTabName") : "user",
 			tabcontainerspace: "",
 			tabchangeParent: false,
 			tabChangeConfirmModal: false,
@@ -70,55 +71,6 @@ class HomePage extends Component {
 		});
 	}
 
-	//Socket
-	// connectToWebSocketApi = () => {
-	// 	const { connectToWebsocket } = this.props;
-	// 	let email = 'app.admin@cal.com';
-	// 	let id = 1;
-	// 	connectToWebsocket(email, id).then(() => {
-	// 		this.reciveMessagesUsingWebsocket();
-	// 	})
-
-	// }
-	// componentWillUnmount() {
-	// 	const { disconnectToWebsocket, websocket } = this.props;
-	// 	disconnectToWebsocket(websocket)
-	// }
-
-	// reciveMessagesUsingWebsocket = () => {
-	// 	//alert(1)
-	// 	const { websocket } = this.props;
-
-	// 	//if (websocket) {
-	// 	// alert();
-	// 	websocket.onmessage = (evt) => {
-	// 		var receivedMsg = evt.data;
-	// 		console.log("received_msg", receivedMsg)
-	// 		Utility.toastNotifications(receivedMsg, "Success", "success");
-	// 		alert("Message is received...");
-	// 	};
-	// 	//console.log("websocket", websocket)
-	// 	websocket.onclose = e => {
-	// 		// alert(222222222222222222222222222222222222222222222222222222222222222222222222222222222222);           
-	// 		//  setTimeout(()=>{
-	// 		//this.check()
-	// 		// },1000)
-	// 		// that.timeout = that.timeout + that.timeout; //increment retry interval
-	// 		//connectInterval = setTimeout(this.check, Math.min(10000, that.timeout)); //call check function after timeout
-	// 	};
-	// 	/* websocket.onclose = (event) => {
-	// 		 connectToWebsocket()
-	// 		 alert();
-	// 		 console.log("WebSocket is closed now.");
-	// 	 };*/
-	// 	//}
-
-	// }
-	// check = () => {
-	// 	const { websocket, connectToWebsocket, userCredentials } = this.props;
-	// 	if (!websocket || websocket.readyState == WebSocket.CLOSED) connectToWebsocket(userCredentials); //check if websocket instance is closed, if so call `connect` function.
-	// };
-
 	//Socket finish		
 	setTabConatinerSpaceClass = (className) => {
 		this.setState({
@@ -161,7 +113,7 @@ class HomePage extends Component {
 		} else {
 			this.setState({
 				selectedTabName: tabName
-			},()=>{
+			}, () => {
 				localStorage.setItem("selectedTabName", tabName);
 			})
 		}
@@ -187,14 +139,9 @@ class HomePage extends Component {
 				selectedTabName: this.props.match.params.type
 			})
 		} else {
-			// if (Object.keys(roleWisePermission) && Object.keys(roleWisePermission).length > 0) {
-			//let tab_order = ["worker"];
-			//let first_tab = Object.keys(roleWisePermission).filter((x) => tab_order.includes(x))[0];
-			//let first_tab = tab_order.filter((x) => Object.keys(roleWisePermission).includes(x))[0];
 			this.setState({
-				selectedTabName: localStorage.getItem("selectedTabName") && localStorage.getItem("selectedTabName") != "" ? localStorage.getItem("selectedTabName") : "worker"
+				selectedTabName: localStorage.getItem("selectedTabName") && localStorage.getItem("selectedTabName") != "" ? localStorage.getItem("selectedTabName") : "user"
 			})
-			//}
 		}
 	}
 
@@ -211,16 +158,25 @@ class HomePage extends Component {
 		const { t, roleWisePermission, userCredentials } = this.props;
 		let arryHash = roleWisePermission;
 		let arry = []
-
-		let roleName = userCredentials.hasOwnProperty('user_details') && userCredentials.user_details && userCredentials.user_details.hasOwnProperty('role_name') && userCredentials.user_details.role_name
-		let version = userCredentials.hasOwnProperty('user_details') && userCredentials.user_details && userCredentials.user_details.hasOwnProperty('version') && userCredentials.user_details.version
 		arry.push(
-			<Tab eventKey="worker" title="Users" key={0}>
-				{this.state.selectedTabName == 'worker' ?
-					< Worker setTabConatinerSpaceClass={this.setTabConatinerSpaceClass} detectChangesIndividualTab={this.detectChangesIndividualTab} /> : null}
+			<Tab eventKey="user" title="Users" key={0}>
+				{this.state.selectedTabName == 'user' ?
+					<User setTabConatinerSpaceClass={this.setTabConatinerSpaceClass} detectChangesIndividualTab={this.detectChangesIndividualTab} /> : null}
 			</Tab>
 		)
-		
+		arry.push(
+			<Tab eventKey="store" title="Store" key={1}>
+				{this.state.selectedTabName == 'store' ?
+					<Store setTabConatinerSpaceClass={this.setTabConatinerSpaceClass} detectChangesIndividualTab={this.detectChangesIndividualTab} /> : null}
+			</Tab>
+		)
+		arry.push(
+			<Tab eventKey="catagory" title="Catagory" key={2}>
+				{this.state.selectedTabName == 'catagory' ?
+					<Catagory setTabConatinerSpaceClass={this.setTabConatinerSpaceClass} detectChangesIndividualTab={this.detectChangesIndividualTab} /> : null}
+			</Tab>
+		)
+
 
 		return arry;
 
@@ -229,7 +185,7 @@ class HomePage extends Component {
 	firstTimeSelectedTab = () => {
 		let locationPath = this.props.history.location.pathname.split("/")
 		let lastIndex = locationPath.length - 1
-		if (locationPath[lastIndex] == "home" && localStorage.getItem("selectedTabName") != "worker" && localStorage.getItem("selectedTabName") == "organization") {
+		if (locationPath[lastIndex] == "home" && localStorage.getItem("selectedTabName") != "user" && localStorage.getItem("selectedTabName") == "organization") {
 			this.setState({
 				selectedTabName: "organization"
 			}, () => {
@@ -237,9 +193,9 @@ class HomePage extends Component {
 			})
 		} else {
 			this.setState({
-				selectedTabName: "worker"
+				selectedTabName: "user"
 			}, () => {
-				localStorage.setItem("selectedTabName", "worker")
+				localStorage.setItem("selectedTabName", "user")
 			})
 		}
 	}

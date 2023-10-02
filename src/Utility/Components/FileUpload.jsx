@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 //import CancelConfirmModal from './CancelConfirmModal';
 import PropTypes from 'prop-types';
-import { useTranslation, withTranslation, Trans } from 'react-i18next';
 import { loaderStateTrue, loaderStateFalse } from '../../Actions/AllAction';
-import { setToken, setUserCredentials, logOutApp, userrole } from '../../Modules/Login/Actions/LoginAction';
+import { setToken, setUserCredentials, logOutApp, userrole } from '../../Login/Actions/LoginAction';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 
@@ -70,12 +69,12 @@ class FileUpload extends Component {
     }
 
     render() {
-        const { type,fileUpload,fileNameDisplay,parentClassName,labelClassName,errorClassName,errorLabel, t } = this.props;
+        const { type,fileUpload,fileNameDisplay,parentClassName,labelClassName,errorClassName,errorLabel, labelName } = this.props;
         return (  
             <div>  
                 <div className={parentClassName}>
                     <label className={labelClassName}>
-                        <span >Choose file</span>
+                        <span >{labelName}</span>
                         <input onChange={fileUpload} type={type} />
                     </label>
 
@@ -84,15 +83,6 @@ class FileUpload extends Component {
                 </div>
                 <div className="clearfix"></div>
                 <div className={errorClassName}>{errorLabel}</div>
-
-               {/*<CancelConfirmModal
-					headerContent="Do you really want to remove the document?"
-					BodyContent=""
-					buttonContent=" Yes, Remove it"
-					show={this.state.removeFileModalShow}
-					onHide={this.closeFileRemoveModal}
-					onClickButton={this.removefileNameCompoent}
-               />*/}
 
             </div>
         );
@@ -127,6 +117,7 @@ FileUpload.defaultProps = {
     CommentInputUi:[],
     uploadeFileTitle:"",
     uploadeFileTitleh6ClassName : "",
+    labelName : "Choose file",
 }
 
 const mapStateToProps = (globalState) => {
@@ -135,5 +126,4 @@ const mapStateToProps = (globalState) => {
 	};
 }
 
-export default withRouter(connect(mapStateToProps, { loaderStateTrue, loaderStateFalse, setToken, setUserCredentials, logOutApp })
-	(withTranslation()(FileUpload)));
+export default withRouter(connect(mapStateToProps, { loaderStateTrue, loaderStateFalse, setToken, setUserCredentials, logOutApp })(FileUpload));

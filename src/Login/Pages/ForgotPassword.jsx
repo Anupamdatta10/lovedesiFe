@@ -250,7 +250,7 @@ const ForgotPassword = (props) => {
             valid = false;
             setState(prev => ({
                 ...prev,
-                usernameError: 'Please enter valid email or phone number'
+                usernameError: 'Please enter valid email'
             }))
         }
 
@@ -330,8 +330,9 @@ const ForgotPassword = (props) => {
                     <div className="left_section login_box_inner white_background forgotpass">
                         <div className="logo-box-inner">
                             <div className="titleposition">
-                                <img src={require('../../Utility/Public/images/logoNew.png')} className="logoInner" />
-                                <h3 className="titletwo">Dashboard</h3>
+                                {/* <h2 className="titleone">LoveDesi</h2>
+                                <h3 className="titletwo">Dashboard</h3> */}
+                                 <img src={require('../../Utility/Public/images/logoNew.jpg')} className="logoInner" />
                             </div>
                         </div>
                         <div className="itemsContainer login_left_inner">
